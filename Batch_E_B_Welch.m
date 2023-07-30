@@ -1,9 +1,9 @@
 %This code is for density overlap for single color only
 
-MasterC = 'E:\Batch\5B\Control';
-%MasterC = 'E:\Batch\5B\Extra'; - NOPE
-%MasterC = 'E:\Batch\5B\All';
-%MasterC = 'E:\Batch\5B\Cont';
+MasterC = 'E:\Batch\10B\Control';
+%MasterC = 'E:\Batch\10B\Extra'; - NOPE
+%MasterC = 'E:\Batch\10B\All';
+%MasterC = 'E:\Batch\10B\Cont';
 
 MasterCS = imageDatastore(MasterC);
 
@@ -23,14 +23,14 @@ Mstd3pos = MSRrday(:,3);
 
 
 %Copper - Trial 1
-CuC = 'E:\Batch\5B\T1Cu\0';
-Cu1 = 'E:\Batch\5B\T1Cu\1';
-Cu2 = 'E:\Batch\5B\T1Cu\2';
-Cu3 = 'E:\Batch\5B\T1Cu\3';
-Cu4 = 'E:\Batch\5B\T1Cu\4';
-Cu5 = 'E:\Batch\5B\T1Cu\5';
-Cu6 = 'E:\Batch\5B\T1Cu\6';
-Cu7 = 'E:\Batch\5B\T1Cu\7';
+CuC = 'E:\Batch\10B\T1Cu\0';
+Cu1 = 'E:\Batch\10B\T1Cu\1';
+Cu2 = 'E:\Batch\10B\T1Cu\2';
+Cu3 = 'E:\Batch\10B\T1Cu\3';
+Cu4 = 'E:\Batch\10B\T1Cu\4';
+Cu5 = 'E:\Batch\10B\T1Cu\5';
+Cu6 = 'E:\Batch\10B\T1Cu\6';
+Cu7 = 'E:\Batch\10B\T1Cu\7';
 CuCS = imageDatastore(CuC);
 Cu1S = imageDatastore(Cu1);
 Cu2S = imageDatastore(Cu2);
@@ -63,14 +63,14 @@ rmean = [rday0(:,1); rday1(:,1); rday2(:,1); rday3(:,1); rday4(:,1); rday5(:,1);
 %rstd3 = [rmeanstd0(:,3); rmeanstd1(:,3); rmeanstd2(:,3); rmeanstd3(:,3); rmeanstd4(:,3); rmeanstd5(:,3); rmeanstd6(:,3); rmeanstd7(:,3)];
 
 %Zinc - Trial 2
-ZnC = 'E:\Batch\5B\T2Zn\0';
-Zn1 = 'E:\Batch\5B\T2Zn\1';
-Zn2 = 'E:\Batch\5B\T2Zn\2';
-Zn3 = 'E:\Batch\5B\T2Zn\3';
-Zn4 = 'E:\Batch\5B\T2Zn\4';
-Zn5 = 'E:\Batch\5B\T2Zn\5';
-Zn6 = 'E:\Batch\5B\T2Zn\6';
-Zn7 = 'E:\Batch\5B\T2Zn\7';
+ZnC = 'E:\Batch\10B\T2Zn\0';
+Zn1 = 'E:\Batch\10B\T2Zn\1';
+Zn2 = 'E:\Batch\10B\T2Zn\2';
+Zn3 = 'E:\Batch\10B\T2Zn\3';
+Zn4 = 'E:\Batch\10B\T2Zn\4';
+Zn5 = 'E:\Batch\10B\T2Zn\5';
+Zn6 = 'E:\Batch\10B\T2Zn\6';
+Zn7 = 'E:\Batch\10B\T2Zn\7';
 ZnCS = imageDatastore(ZnC);
 Zn1S = imageDatastore(Zn1);
 Zn2S = imageDatastore(Zn2);
@@ -101,14 +101,14 @@ zrday7 = diffR2(Zn7R,MSR);
 zrmean = [zrday0(:,1); zrday1(:,1); zrday2(:,1); zrday3(:,1); zrday4(:,1); zrday5(:,1); zrday6(:,1); zrday7(:,1)];
 
 %Lead - Trial 3
-PbC = 'E:\Batch\5B\T3Pb\0';
-Pb1 = 'E:\Batch\5B\T3Pb\1';
-Pb2 = 'E:\Batch\5B\T3Pb\2';
-Pb3 = 'E:\Batch\5B\T3Pb\3';
-Pb4 = 'E:\Batch\5B\T3Pb\4';
-Pb5 = 'E:\Batch\5B\T3Pb\5';
-Pb6 = 'E:\Batch\5B\T3Pb\6';
-Pb7 = 'E:\Batch\5B\T3Pb\7';
+PbC = 'E:\Batch\10B\T3Pb\0';
+Pb1 = 'E:\Batch\10B\T3Pb\1';
+Pb2 = 'E:\Batch\10B\T3Pb\2';
+Pb3 = 'E:\Batch\10B\T3Pb\3';
+Pb4 = 'E:\Batch\10B\T3Pb\4';
+Pb5 = 'E:\Batch\10B\T3Pb\5';
+Pb6 = 'E:\Batch\10B\T3Pb\6';
+Pb7 = 'E:\Batch\10B\T3Pb\7';
 PbCS = imageDatastore(PbC);
 Pb1S = imageDatastore(Pb1);
 Pb2S = imageDatastore(Pb2);
@@ -138,14 +138,14 @@ prday7 = diffR2(Pb7R,MSR);
 prmean = [prday0(:,1); prday1(:,1); prday2(:,1); prday3(:,1); prday4(:,1); prday5(:,1); prday6(:,1); prday7(:,1)];
 
 %Mix - Trial 4
-MC = 'E:\Batch\5B\T4Mix\0';
-M1 = 'E:\Batch\5B\T4Mix\1';
-M2 = 'E:\Batch\5B\T4Mix\2';
-M3 = 'E:\Batch\5B\T4Mix\3';
-M4 = 'E:\Batch\5B\T4Mix\4';
-M5 = 'E:\Batch\5B\T4Mix\5';
-M6 = 'E:\Batch\5B\T4Mix\6';
-M7 = 'E:\Batch\5B\T4Mix\7';
+MC = 'E:\Batch\10B\T4Mix\0';
+M1 = 'E:\Batch\10B\T4Mix\1';
+M2 = 'E:\Batch\10B\T4Mix\2';
+M3 = 'E:\Batch\10B\T4Mix\3';
+M4 = 'E:\Batch\10B\T4Mix\4';
+M5 = 'E:\Batch\10B\T4Mix\5';
+M6 = 'E:\Batch\10B\T4Mix\6';
+M7 = 'E:\Batch\10B\T4Mix\7';
 MCS = imageDatastore(MC);
 M1S = imageDatastore(M1);
 M2S = imageDatastore(M2);
@@ -175,14 +175,14 @@ mrday7 = diffR2(M7R,MSR);
 mrmean = [mrday0(:,1); mrday1(:,1); mrday2(:,1); mrday3(:,1); mrday4(:,1); mrday5(:,1); mrday6(:,1); mrday7(:,1)];
 
 %Control for comparison
-CC = 'E:\Batch\5B\T5Con\0';
-C1 = 'E:\Batch\5B\T5Con\1';
-C2 = 'E:\Batch\5B\T5Con\2';
-C3 = 'E:\Batch\5B\T5Con\3';
-C4 = 'E:\Batch\5B\T5Con\4';
-C5 = 'E:\Batch\5B\T5Con\5';
-C6 = 'E:\Batch\5B\T5Con\6';
-C7 = 'E:\Batch\5B\T5Con\7';
+CC = 'E:\Batch\10B\T5Con\0';
+C1 = 'E:\Batch\10B\T5Con\1';
+C2 = 'E:\Batch\10B\T5Con\2';
+C3 = 'E:\Batch\10B\T5Con\3';
+C4 = 'E:\Batch\10B\T5Con\4';
+C5 = 'E:\Batch\10B\T5Con\5';
+C6 = 'E:\Batch\10B\T5Con\6';
+C7 = 'E:\Batch\10B\T5Con\7';
 CCS = imageDatastore(CC);
 C1S = imageDatastore(C1);
 C2S = imageDatastore(C2);
@@ -218,14 +218,14 @@ Contstd2 = ContM + (2.*Contstd')
 Contstd3 = ContM + (3.*Contstd')
 
 %Wet - Trial 6
-WC = 'E:\Batch\5B\T6Wet\0';
-W1 = 'E:\Batch\5B\T6Wet\1';
-W2 = 'E:\Batch\5B\T6Wet\2';
-W3 = 'E:\Batch\5B\T6Wet\3';
-W4 = 'E:\Batch\5B\T6Wet\4';
-W5 = 'E:\Batch\5B\T6Wet\5';
-W6 = 'E:\Batch\5B\T6Wet\6';
-W7 = 'E:\Batch\5B\T6Wet\7';
+WC = 'E:\Batch\10B\T6Wet\0';
+W1 = 'E:\Batch\10B\T6Wet\1';
+W2 = 'E:\Batch\10B\T6Wet\2';
+W3 = 'E:\Batch\10B\T6Wet\3';
+W4 = 'E:\Batch\10B\T6Wet\4';
+W5 = 'E:\Batch\10B\T6Wet\5';
+W6 = 'E:\Batch\10B\T6Wet\6';
+W7 = 'E:\Batch\10B\T6Wet\7';
 WCS = imageDatastore(WC);
 W1S = imageDatastore(W1);
 W2S = imageDatastore(W2);
@@ -255,14 +255,14 @@ wrday7 = diffR2(W7R,MSR);
 wrmean = [wrday0(:,1); wrday1(:,1); wrday2(:,1); wrday3(:,1); wrday4(:,1); wrday5(:,1); wrday6(:,1); wrday7(:,1)];
 
 %Dry - Trial 7
-DC = 'E:\Batch\5B\T7Dry\0';
-D1 = 'E:\Batch\5B\T7Dry\1';
-D2 = 'E:\Batch\5B\T7Dry\2';
-D3 = 'E:\Batch\5B\T7Dry\3';
-D4 = 'E:\Batch\5B\T7Dry\4';
-D5 = 'E:\Batch\5B\T7Dry\5';
-D6 = 'E:\Batch\5B\T7Dry\6';
-D7 = 'E:\Batch\5B\T7Dry\7';
+DC = 'E:\Batch\10B\T7Dry\0';
+D1 = 'E:\Batch\10B\T7Dry\1';
+D2 = 'E:\Batch\10B\T7Dry\2';
+D3 = 'E:\Batch\10B\T7Dry\3';
+D4 = 'E:\Batch\10B\T7Dry\4';
+D5 = 'E:\Batch\10B\T7Dry\5';
+D6 = 'E:\Batch\10B\T7Dry\6';
+D7 = 'E:\Batch\10B\T7Dry\7';
 DCS = imageDatastore(DC);
 D1S = imageDatastore(D1);
 D2S = imageDatastore(D2);
@@ -292,14 +292,14 @@ drday7 = diffR2(D7R,MSR);
 drmean = [drday0(:,1); drday1(:,1); drday2(:,1); drday3(:,1); drday4(:,1); drday5(:,1); drday6(:,1); drday7(:,1)];
 
 %Nutrients - Trial 8
-NC = 'E:\Batch\5B\T8Nut\0';
-N1 = 'E:\Batch\5B\T8Nut\1';
-N2 = 'E:\Batch\5B\T8Nut\2';
-N3 = 'E:\Batch\5B\T8Nut\3';
-N4 = 'E:\Batch\5B\T8Nut\4';
-N5 = 'E:\Batch\5B\T8Nut\5';
-N6 = 'E:\Batch\5B\T8Nut\6';
-N7 = 'E:\Batch\5B\T8Nut\7';
+NC = 'E:\Batch\10B\T8Nut\0';
+N1 = 'E:\Batch\10B\T8Nut\1';
+N2 = 'E:\Batch\10B\T8Nut\2';
+N3 = 'E:\Batch\10B\T8Nut\3';
+N4 = 'E:\Batch\10B\T8Nut\4';
+N5 = 'E:\Batch\10B\T8Nut\5';
+N6 = 'E:\Batch\10B\T8Nut\6';
+N7 = 'E:\Batch\10B\T8Nut\7';
 NCS = imageDatastore(NC);
 N1S = imageDatastore(N1);
 N2S = imageDatastore(N2);
@@ -329,14 +329,14 @@ nrday7 = diffR2(N7R,MSR);
 nrmean = [nrday0(:,1); nrday1(:,1); nrday2(:,1); nrday3(:,1); nrday4(:,1); nrday5(:,1); nrday6(:,1); nrday7(:,1)];
 
 %Long - Trial 9
-LC = 'E:\Batch\5B\T9Long\0';
-L1 = 'E:\Batch\5B\T9Long\1';
-L2 = 'E:\Batch\5B\T9Long\2';
-L3 = 'E:\Batch\5B\T9Long\3';
-L4 = 'E:\Batch\5B\T9Long\4';
-L5 = 'E:\Batch\5B\T9Long\5';
-L6 = 'E:\Batch\5B\T9Long\6';
-L7 = 'E:\Batch\5B\T9Long\7';
+LC = 'E:\Batch\10B\T9Long\0';
+L1 = 'E:\Batch\10B\T9Long\1';
+L2 = 'E:\Batch\10B\T9Long\2';
+L3 = 'E:\Batch\10B\T9Long\3';
+L4 = 'E:\Batch\10B\T9Long\4';
+L5 = 'E:\Batch\10B\T9Long\5';
+L6 = 'E:\Batch\10B\T9Long\6';
+L7 = 'E:\Batch\10B\T9Long\7';
 LCS = imageDatastore(LC);
 L1S = imageDatastore(L1);
 L2S = imageDatastore(L2);
@@ -366,14 +366,14 @@ lrday7 = diffR2(L7R,MSR);
 lrmean = [lrday0(:,1); lrday1(:,1); lrday2(:,1); lrday3(:,1); lrday4(:,1); lrday5(:,1); lrday6(:,1); lrday7(:,1)];
 
 %Short - Trial 10
-SC = 'E:\Batch\5B\T10Shrt\0';
-S1 = 'E:\Batch\5B\T10Shrt\1';
-S2 = 'E:\Batch\5B\T10Shrt\2';
-S3 = 'E:\Batch\5B\T10Shrt\3';
-S4 = 'E:\Batch\5B\T10Shrt\4';
-S5 = 'E:\Batch\5B\T10Shrt\5';
-S6 = 'E:\Batch\5B\T10Shrt\6';
-S7 = 'E:\Batch\5B\T10Shrt\7';
+SC = 'E:\Batch\10B\T10Shrt\0';
+S1 = 'E:\Batch\10B\T10Shrt\1';
+S2 = 'E:\Batch\10B\T10Shrt\2';
+S3 = 'E:\Batch\10B\T10Shrt\3';
+S4 = 'E:\Batch\10B\T10Shrt\4';
+S5 = 'E:\Batch\10B\T10Shrt\5';
+S6 = 'E:\Batch\10B\T10Shrt\6';
+S7 = 'E:\Batch\10B\T10Shrt\7';
 SCS = imageDatastore(SC);
 S1S = imageDatastore(S1);
 S2S = imageDatastore(S2);
@@ -403,14 +403,14 @@ srday7 = diffR2(S7R,MSR);
 srmean = [srday0(:,1); srday1(:,1); srday2(:,1); srday3(:,1); srday4(:,1); srday5(:,1); srday6(:,1); srday7(:,1)];
 
 %Dark - Trial 11
-AC = 'E:\Batch\5B\T11Dark\0';
-A1 = 'E:\Batch\5B\T11Dark\1';
-A2 = 'E:\Batch\5B\T11Dark\2';
-A3 = 'E:\Batch\5B\T11Dark\3';
-A4 = 'E:\Batch\5B\T11Dark\4';
-A5 = 'E:\Batch\5B\T11Dark\5';
-A6 = 'E:\Batch\5B\T11Dark\6';
-A7 = 'E:\Batch\5B\T11Dark\7';
+AC = 'E:\Batch\10B\T11Dark\0';
+A1 = 'E:\Batch\10B\T11Dark\1';
+A2 = 'E:\Batch\10B\T11Dark\2';
+A3 = 'E:\Batch\10B\T11Dark\3';
+A4 = 'E:\Batch\10B\T11Dark\4';
+A5 = 'E:\Batch\10B\T11Dark\5';
+A6 = 'E:\Batch\10B\T11Dark\6';
+A7 = 'E:\Batch\10B\T11Dark\7';
 ACS = imageDatastore(AC);
 A1S = imageDatastore(A1);
 A2S = imageDatastore(A2);
@@ -448,6 +448,7 @@ CuWr4 = Welch(crday4(:,1), rday4(:,1), crday4(:,5), rday4(:,5));
 CuWr5 = Welch(crday5(:,1), rday5(:,1), crday5(:,5), rday5(:,5));
 CuWr6 = Welch(crday6(:,1), rday6(:,1), crday6(:,5), rday6(:,5));
 CuWr7 = Welch(crday7(:,1), rday7(:,1), crday7(:,5), rday7(:,5));
+CuWR = [CuWr0; CuWr1; CuWr2; CuWr3; CuWr4; CuWr5; CuWr6; CuWr7];
 
 ZnWr0 = Welch(crday0(:,1), zrday0(:,1), crday0(:,5), zrday0(:,5));
 ZnWr1 = Welch(crday1(:,1), zrday1(:,1), crday1(:,5), zrday1(:,5));
@@ -457,6 +458,7 @@ ZnWr4 = Welch(crday4(:,1), zrday4(:,1), crday4(:,5), zrday4(:,5));
 ZnWr5 = Welch(crday5(:,1), zrday5(:,1), crday5(:,5), zrday5(:,5));
 ZnWr6 = Welch(crday6(:,1), zrday6(:,1), crday6(:,5), zrday6(:,5));
 ZnWr7 = Welch(crday7(:,1), zrday7(:,1), crday7(:,5), zrday7(:,5));
+ZnWR = [ZnWr0; ZnWr1; ZnWr2; ZnWr3; ZnWr4; ZnWr5; ZnWr6; ZnWr7];  
 
 PbWr0 = Welch(crday0(:,1), prday0(:,1), crday0(:,5), prday0(:,5));
 PbWr1 = Welch(crday1(:,1), prday1(:,1), crday1(:,5), prday1(:,5));
@@ -466,6 +468,7 @@ PbWr4 = Welch(crday4(:,1), prday4(:,1), crday4(:,5), prday4(:,5));
 PbWr5 = Welch(crday5(:,1), prday5(:,1), crday5(:,5), prday5(:,5));
 PbWr6 = Welch(crday6(:,1), prday6(:,1), crday6(:,5), prday6(:,5));
 PbWr7 = Welch(crday7(:,1), prday7(:,1), crday7(:,5), prday7(:,5));
+PbWR = [PbWr0; PbWr1; PbWr2; PbWr3; PbWr4; PbWr5; PbWr6; PbWr7];
 
 MxWr0 = Welch(crday0(:,1), mrday0(:,1), crday0(:,5), mrday0(:,5));
 MxWr1 = Welch(crday1(:,1), mrday1(:,1), crday1(:,5), mrday1(:,5));
@@ -475,6 +478,7 @@ MxWr4 = Welch(crday4(:,1), mrday4(:,1), crday4(:,5), mrday4(:,5));
 MxWr5 = Welch(crday5(:,1), mrday5(:,1), crday5(:,5), mrday5(:,5));
 MxWr6 = Welch(crday6(:,1), mrday6(:,1), crday6(:,5), mrday6(:,5));
 MxWr7 = Welch(crday7(:,1), mrday7(:,1), crday7(:,5), mrday7(:,5));
+MxWR = [MxWr0; MxWr1; MxWr2; MxWr3; MxWr4; MxWr5; MxWr6; MxWr7];
 
 WWr0 = Welch(crday0(:,1), wrday0(:,1), crday0(:,5), wrday0(:,5));
 WWr1 = Welch(crday1(:,1), wrday1(:,1), crday1(:,5), wrday1(:,5));
@@ -484,6 +488,7 @@ WWr4 = Welch(crday4(:,1), wrday4(:,1), crday4(:,5), wrday4(:,5));
 WWr5 = Welch(crday5(:,1), wrday5(:,1), crday5(:,5), wrday5(:,5));
 WWr6 = Welch(crday6(:,1), wrday6(:,1), crday6(:,5), wrday6(:,5));
 WWr7 = Welch(crday7(:,1), wrday7(:,1), crday7(:,5), wrday7(:,5));
+WWR = [WWr0; WWr1; WWr2; WWr3; WWr4; WWr5; WWr6; WWr7];  
 
 DWr0 = Welch(crday0(:,1), drday0(:,1), crday0(:,5), drday0(:,5));
 DWr1 = Welch(crday1(:,1), drday1(:,1), crday1(:,5), drday1(:,5));
@@ -493,6 +498,7 @@ DWr4 = Welch(crday4(:,1), drday4(:,1), crday4(:,5), drday4(:,5));
 DWr5 = Welch(crday5(:,1), drday5(:,1), crday5(:,5), drday5(:,5));
 DWr6 = Welch(crday6(:,1), drday6(:,1), crday6(:,5), drday6(:,5));
 DWr7 = Welch(crday7(:,1), drday7(:,1), crday7(:,5), drday7(:,5));
+DWR = [DWr0; DWr1; DWr2; DWr3; DWr4; DWr5; DWr6; DWr7];
 
 NWr0 = Welch(crday0(:,1), nrday0(:,1), crday0(:,5), nrday0(:,5));
 NWr1 = Welch(crday1(:,1), nrday1(:,1), crday1(:,5), nrday1(:,5));
@@ -502,6 +508,7 @@ NWr4 = Welch(crday4(:,1), nrday4(:,1), crday4(:,5), nrday4(:,5));
 NWr5 = Welch(crday5(:,1), nrday5(:,1), crday5(:,5), nrday5(:,5));
 NWr6 = Welch(crday6(:,1), nrday6(:,1), crday6(:,5), nrday6(:,5));
 NWr7 = Welch(crday7(:,1), nrday7(:,1), crday7(:,5), nrday7(:,5));
+NWR = [NWr0; NWr1; NWr2; NWr3; NWr4; NWr5; NWr6; NWr7];   
 
 LWr0 = Welch(crday0(:,1), lrday0(:,1), crday0(:,5), lrday0(:,5));
 LWr1 = Welch(crday1(:,1), lrday1(:,1), crday1(:,5), lrday1(:,5));
@@ -511,6 +518,7 @@ LWr4 = Welch(crday4(:,1), lrday4(:,1), crday4(:,5), lrday4(:,5));
 LWr5 = Welch(crday5(:,1), lrday5(:,1), crday5(:,5), lrday5(:,5));
 LWr6 = Welch(crday6(:,1), lrday6(:,1), crday6(:,5), lrday6(:,5));
 LWr7 = Welch(crday7(:,1), lrday7(:,1), crday7(:,5), lrday7(:,5));
+LWR = [LWr0; LWr1; LWr2; LWr3; LWr4; LWr5; LWr6; LWr7];
 
 SWr0 = Welch(crday0(:,1), srday0(:,1), crday0(:,5), srday0(:,5));
 SWr1 = Welch(crday1(:,1), srday1(:,1), crday1(:,5), srday1(:,5));
@@ -520,6 +528,7 @@ SWr4 = Welch(crday4(:,1), srday4(:,1), crday4(:,5), srday4(:,5));
 SWr5 = Welch(crday5(:,1), srday5(:,1), crday5(:,5), srday5(:,5));
 SWr6 = Welch(crday6(:,1), srday6(:,1), crday6(:,5), srday6(:,5));
 SWr7 = Welch(crday7(:,1), srday7(:,1), crday7(:,5), srday7(:,5));
+SWR = [SWr0; SWr1; SWr2; SWr3; SWr4; SWr5; SWr6; SWr7];
 
 AWr0 = Welch(crday0(:,1), arday0(:,1), crday0(:,5), arday0(:,5));
 AWr1 = Welch(crday1(:,1), arday1(:,1), crday1(:,5), arday1(:,5));
@@ -529,6 +538,7 @@ AWr4 = Welch(crday4(:,1), arday4(:,1), crday4(:,5), arday4(:,5));
 AWr5 = Welch(crday5(:,1), arday5(:,1), crday5(:,5), arday5(:,5));
 AWr6 = Welch(crday6(:,1), arday6(:,1), crday6(:,5), arday6(:,5));
 AWr7 = Welch(crday7(:,1), arday7(:,1), crday7(:,5), arday7(:,5));
+AWR = [AWr0; AWr1; AWr2; AWr3; AWr4; AWr5; AWr6; AWr7];
 
 %metal only
 x = (0:7);
@@ -588,10 +598,10 @@ hold off
 
 
 %GREEN
-MasterC = 'E:\Batch\5B\Control';
-%MasterC = 'E:\Batch\5B\Extra'; - NOPE
-%MasterC = 'E:\Batch\5B\All';
-%MasterC = 'E:\Batch\5B\Cont';
+MasterC = 'E:\Batch\10B\Control';
+%MasterC = 'E:\Batch\10B\Extra'; - NOPE
+%MasterC = 'E:\Batch\10B\All';
+%MasterC = 'E:\Batch\10B\Cont';
 MasterCS = imageDatastore(MasterC);
 
 %Master Control
@@ -842,6 +852,107 @@ agday7 = diffR2(A7G,MSG);
 
 agmean = [agday0(:,1); agday1(:,1); agday2(:,1); agday3(:,1); agday4(:,1); agday5(:,1); agday6(:,1); agday7(:,1)];
 
+%WELCH
+CuWg0 = Welch(cgday0(:,1), gday0(:,1), cgday0(:,5), gday0(:,5));
+CuWg1 = Welch(cgday1(:,1), gday1(:,1), cgday1(:,5), gday1(:,5));
+CuWg2 = Welch(cgday2(:,1), gday2(:,1), cgday2(:,5), gday2(:,5));
+CuWg3 = Welch(cgday3(:,1), gday3(:,1), cgday3(:,5), gday3(:,5));
+CuWg4 = Welch(cgday4(:,1), gday4(:,1), cgday4(:,5), gday4(:,5));
+CuWg5 = Welch(cgday5(:,1), gday5(:,1), cgday5(:,5), gday5(:,5));
+CuWg6 = Welch(cgday6(:,1), gday6(:,1), cgday6(:,5), gday6(:,5));
+CuWg7 = Welch(cgday7(:,1), gday7(:,1), cgday7(:,5), gday7(:,5));
+CuWG = [CuWg0; CuWg1; CuWg2; CuWg3; CuWg4; CuWg5; CuWg6; CuWg7];
+
+ZnWg0 = Welch(cgday0(:,1), zgday0(:,1), cgday0(:,5), zgday0(:,5));
+ZnWg1 = Welch(cgday1(:,1), zgday1(:,1), cgday1(:,5), zgday1(:,5));
+ZnWg2 = Welch(cgday2(:,1), zgday2(:,1), cgday2(:,5), zgday2(:,5));
+ZnWg3 = Welch(cgday3(:,1), zgday3(:,1), cgday3(:,5), zgday3(:,5));
+ZnWg4 = Welch(cgday4(:,1), zgday4(:,1), cgday4(:,5), zgday4(:,5));
+ZnWg5 = Welch(cgday5(:,1), zgday5(:,1), cgday5(:,5), zgday5(:,5));
+ZnWg6 = Welch(cgday6(:,1), zgday6(:,1), cgday6(:,5), zgday6(:,5));
+ZnWg7 = Welch(cgday7(:,1), zgday7(:,1), cgday7(:,5), zgday7(:,5));
+ZnWG = [ZnWg0; ZnWg1; ZnWg2;ZnWg3; ZnWg4; ZnWg5; ZnWg6; ZnWg7];  
+
+PbWg0 = Welch(cgday0(:,1), pgday0(:,1), cgday0(:,5), pgday0(:,5));
+PbWg1 = Welch(cgday1(:,1), pgday1(:,1), cgday1(:,5), pgday1(:,5));
+PbWg2 = Welch(cgday2(:,1), pgday2(:,1), cgday2(:,5), pgday2(:,5));
+PbWg3 = Welch(cgday3(:,1), pgday3(:,1), cgday3(:,5), pgday3(:,5));
+PbWg4 = Welch(cgday4(:,1), pgday4(:,1), cgday4(:,5), pgday4(:,5));
+PbWg5 = Welch(cgday5(:,1), pgday5(:,1), cgday5(:,5), pgday5(:,5));
+PbWg6 = Welch(cgday6(:,1), pgday6(:,1), cgday6(:,5), pgday6(:,5));
+PbWg7 = Welch(cgday7(:,1), pgday7(:,1), cgday7(:,5), pgday7(:,5));
+PbWG = [PbWg0; PbWg1; PbWg2; PbWg3; PbWg4; PbWg5; PbWg6; PbWg7];
+
+MxWg0 = Welch(cgday0(:,1), mgday0(:,1), cgday0(:,5), mgday0(:,5));
+MxWg1 = Welch(cgday1(:,1), mgday1(:,1), cgday1(:,5), mgday1(:,5));
+MxWg2 = Welch(cgday2(:,1), mgday2(:,1), cgday2(:,5), mgday2(:,5));
+MxWg3 = Welch(cgday3(:,1), mgday3(:,1), cgday3(:,5), mgday3(:,5));
+MxWg4 = Welch(cgday4(:,1), mgday4(:,1), cgday4(:,5), mgday4(:,5));
+MxWg5 = Welch(cgday5(:,1), mgday5(:,1), cgday5(:,5), mgday5(:,5));
+MxWg6 = Welch(cgday6(:,1), mgday6(:,1), cgday6(:,5), mgday6(:,5));
+MxWg7 = Welch(cgday7(:,1), mgday7(:,1), cgday7(:,5), mgday7(:,5));
+MxWG = [MxWg0; MxWg1; MxWg2; MxWg3; MxWg4; MxWg5; MxWg6; MxWg7];
+
+WWg0 = Welch(cgday0(:,1), wgday0(:,1), cgday0(:,5), wgday0(:,5));
+WWg1 = Welch(cgday1(:,1), wgday1(:,1), cgday1(:,5), wgday1(:,5));
+WWg2 = Welch(cgday2(:,1), wgday2(:,1), cgday2(:,5), wgday2(:,5));
+WWg3 = Welch(cgday3(:,1), wgday3(:,1), cgday3(:,5), wgday3(:,5));
+WWg4 = Welch(cgday4(:,1), wgday4(:,1), cgday4(:,5), wgday4(:,5));
+WWg5 = Welch(cgday5(:,1), wgday5(:,1), cgday5(:,5), wgday5(:,5));
+WWg6 = Welch(cgday6(:,1), wgday6(:,1), cgday6(:,5), wgday6(:,5));
+WWg7 = Welch(cgday7(:,1), wgday7(:,1), cgday7(:,5), wgday7(:,5));
+WWG = [WWg0; WWg1; WWg2; WWg3; WWg4; WWg5; WWg6; WWg7];  
+
+DWg0 = Welch(cgday0(:,1), dgday0(:,1), cgday0(:,5), dgday0(:,5));
+DWg1 = Welch(cgday1(:,1), dgday1(:,1), cgday1(:,5), dgday1(:,5));
+DWg2 = Welch(cgday2(:,1), dgday2(:,1), cgday2(:,5), dgday2(:,5));
+DWg3 = Welch(cgday3(:,1), dgday3(:,1), cgday3(:,5), dgday3(:,5));
+DWg4 = Welch(cgday4(:,1), dgday4(:,1), cgday4(:,5), dgday4(:,5));
+DWg5 = Welch(cgday5(:,1), dgday5(:,1), cgday5(:,5), dgday5(:,5));
+DWg6 = Welch(cgday6(:,1), dgday6(:,1), cgday6(:,5), dgday6(:,5));
+DWg7 = Welch(cgday7(:,1), dgday7(:,1), cgday7(:,5), dgday7(:,5));
+DWG = [DWg0; DWg1; DWg2; DWg3; DWg4; DWg5; DWg6; DWg7];
+
+NWg0 = Welch(cgday0(:,1), ngday0(:,1), cgday0(:,5), ngday0(:,5));
+NWg1 = Welch(cgday1(:,1), ngday1(:,1), cgday1(:,5), ngday1(:,5));
+NWg2 = Welch(cgday2(:,1), ngday2(:,1), cgday2(:,5), ngday2(:,5));
+NWg3 = Welch(cgday3(:,1), ngday3(:,1), cgday3(:,5), ngday3(:,5));
+NWg4 = Welch(cgday4(:,1), ngday4(:,1), cgday4(:,5), ngday4(:,5));
+NWg5 = Welch(cgday5(:,1), ngday5(:,1), cgday5(:,5), ngday5(:,5));
+NWg6 = Welch(cgday6(:,1), ngday6(:,1), cgday6(:,5), ngday6(:,5));
+NWg7 = Welch(cgday7(:,1), ngday7(:,1), cgday7(:,5), ngday7(:,5));
+NWG = [NWg0; NWg1; NWg2; NWg3; NWg4; NWg5; NWg6; NWg7];   
+
+LWg0 = Welch(cgday0(:,1), lgday0(:,1), cgday0(:,5), lgday0(:,5));
+LWg1 = Welch(cgday1(:,1), lgday1(:,1), cgday1(:,5), lgday1(:,5));
+LWg2 = Welch(cgday2(:,1), lgday2(:,1), cgday2(:,5), lgday2(:,5));
+LWg3 = Welch(cgday3(:,1), lgday3(:,1), cgday3(:,5), lgday3(:,5));
+LWg4 = Welch(cgday4(:,1), lgday4(:,1), cgday4(:,5), lgday4(:,5));
+LWg5 = Welch(cgday5(:,1), lgday5(:,1), cgday5(:,5), lgday5(:,5));
+LWg6 = Welch(cgday6(:,1), lgday6(:,1), cgday6(:,5), lgday6(:,5));
+LWg7 = Welch(cgday7(:,1), lgday7(:,1), cgday7(:,5), lgday7(:,5));
+LWG = [LWg0; LWg1; LWg2; LWg3; LWg4; LWg5; LWg6; LWg7];
+
+SWg0 = Welch(cgday0(:,1), sgday0(:,1), cgday0(:,5), sgday0(:,5));
+SWg1 = Welch(cgday1(:,1), sgday1(:,1), cgday1(:,5), sgday1(:,5));
+SWg2 = Welch(cgday2(:,1), sgday2(:,1), cgday2(:,5), sgday2(:,5));
+SWg3 = Welch(cgday3(:,1), sgday3(:,1), cgday3(:,5), sgday3(:,5));
+SWg4 = Welch(cgday4(:,1), sgday4(:,1), cgday4(:,5), sgday4(:,5));
+SWg5 = Welch(cgday5(:,1), sgday5(:,1), cgday5(:,5), sgday5(:,5));
+SWg6 = Welch(cgday6(:,1), sgday6(:,1), cgday6(:,5), sgday6(:,5));
+SWg7 = Welch(cgday7(:,1), sgday7(:,1), cgday7(:,5), sgday7(:,5));
+SWG = [SWg0; SWg1; SWg2; SWg3; SWg4; SWg5; SWg6; SWg7];
+
+AWg0 = Welch(cgday0(:,1), agday0(:,1), cgday0(:,5), agday0(:,5));
+AWg1 = Welch(cgday1(:,1), agday1(:,1), cgday1(:,5), agday1(:,5));
+AWg2 = Welch(cgday2(:,1), agday2(:,1), cgday2(:,5), agday2(:,5));
+AWg3 = Welch(cgday3(:,1), agday3(:,1), cgday3(:,5), agday3(:,5));
+AWg4 = Welch(cgday4(:,1), agday4(:,1), cgday4(:,5), agday4(:,5));
+AWg5 = Welch(cgday5(:,1), agday5(:,1), cgday5(:,5), agday5(:,5));
+AWg6 = Welch(cgday6(:,1), agday6(:,1), cgday6(:,5), agday6(:,5));
+AWg7 = Welch(cgday7(:,1), agday7(:,1), cgday7(:,5), agday7(:,5));
+AWG = [AWg0; AWg1; AWg2; AWg3; AWg4; AWg5; AWg6; AWg7];
+
 x = (0:7);
 figure;
 plot(x,gmean,'LineWidth',2);
@@ -900,7 +1011,7 @@ hold off
 
 
 %BLUE
-MasterC = 'E:\Batch\5B\Control';
+MasterC = 'E:\Batch\10B\Control';
 MasterCS = imageDatastore(MasterC);
 
 %Master Control
@@ -913,7 +1024,7 @@ Cu1B = batchB(Cu1S);
 Cu2B = batchB(Cu2S);
 Cu3B = batchB(Cu3S);
 Cu4B = batchB(Cu4S);
-Cu5B = batchB(Cu5S);
+Cu10B = batchB(Cu5S);
 Cu6B = batchB(Cu6S);
 Cu7B = batchB(Cu7S);
 
@@ -922,7 +1033,7 @@ bday1 = diffR2(Cu1B,MSB);
 bday2 = diffR2(Cu2B,MSB);
 bday3 = diffR2(Cu3B,MSB);
 bday4 = diffR2(Cu4B,MSB);
-bday5 = diffR2(Cu5B,MSB);
+bday5 = diffR2(Cu10B,MSB);
 bday6 = diffR2(Cu6B,MSB);
 bday7 = diffR2(Cu7B,MSB);
 
@@ -934,7 +1045,7 @@ Zn1B = batchB(Zn1S);
 Zn2B = batchB(Zn2S);
 Zn3B = batchB(Zn3S);
 Zn4B = batchB(Zn4S);
-Zn5B = batchB(Zn5S);
+Zn10B = batchB(Zn5S);
 Zn6B = batchB(Zn6S);
 Zn7B = batchB(Zn7S);
 
@@ -943,7 +1054,7 @@ zbday1 = diffR2(Zn1B,MSB);
 zbday2 = diffR2(Zn2B,MSB);
 zbday3 = diffR2(Zn3B,MSB);
 zbday4 = diffR2(Zn4B,MSB);
-zbday5 = diffR2(Zn5B,MSB);
+zbday5 = diffR2(Zn10B,MSB);
 zbday6 = diffR2(Zn6B,MSB);
 zbday7 = diffR2(Zn7B,MSB);
 
@@ -955,7 +1066,7 @@ Pb1B = batchB(Pb1S);
 Pb2B = batchB(Pb2S);
 Pb3B = batchB(Pb3S);
 Pb4B = batchB(Pb4S);
-Pb5B = batchB(Pb5S);
+Pb10B = batchB(Pb5S);
 Pb6B = batchB(Pb6S);
 Pb7B = batchB(Pb7S);
 
@@ -964,7 +1075,7 @@ pbday1 = diffR2(Pb1B,MSB);
 pbday2 = diffR2(Pb2B,MSB);
 pbday3 = diffR2(Pb3B,MSB);
 pbday4 = diffR2(Pb4B,MSB);
-pbday5 = diffR2(Pb5B,MSB);
+pbday5 = diffR2(Pb10B,MSB);
 pbday6 = diffR2(Pb6B,MSB);
 pbday7 = diffR2(Pb7B,MSB);
 
@@ -976,7 +1087,7 @@ M1B = batchB(M1S);
 M2B = batchB(M2S);
 M3B = batchB(M3S);
 M4B = batchB(M4S);
-M5B = batchB(M5S);
+M10B = batchB(M5S);
 M6B = batchB(M6S);
 M7B = batchB(M7S);
 
@@ -985,7 +1096,7 @@ mbday1 = diffR2(M1B,MSB);
 mbday2 = diffR2(M2B,MSB);
 mbday3 = diffR2(M3B,MSB);
 mbday4 = diffR2(M4B,MSB);
-mbday5 = diffR2(M5B,MSB);
+mbday5 = diffR2(M10B,MSB);
 mbday6 = diffR2(M6B,MSB);
 mbday7 = diffR2(M7B,MSB);
 
@@ -997,7 +1108,7 @@ C1B = batchB(C1S);
 C2B = batchB(C2S);
 C3B = batchB(C3S);
 C4B = batchB(C4S);
-C5B = batchB(C5S);
+C10B = batchB(C5S);
 C6B = batchB(C6S);
 C7B = batchB(C7S);
 
@@ -1006,7 +1117,7 @@ cbday1 = diffR2(C1B,MSB);
 cbday2 = diffR2(C2B,MSB);
 cbday3 = diffR2(C3B,MSB);
 cbday4 = diffR2(C4B,MSB);
-cbday5 = diffR2(C5B,MSB);
+cbday5 = diffR2(C10B,MSB);
 cbday6 = diffR2(C6B,MSB);
 cbday7 = diffR2(C7B,MSB);
 
@@ -1024,7 +1135,7 @@ W1B = batchB(W1S);
 W2B = batchB(W2S);
 W3B = batchB(W3S);
 W4B = batchB(W4S);
-W5B = batchB(W5S);
+W10B = batchB(W5S);
 W6B = batchB(W6S);
 W7B = batchB(W7S);
 
@@ -1033,7 +1144,7 @@ wbday1 = diffR2(W1B,MSB);
 wbday2 = diffR2(W2B,MSB);
 wbday3 = diffR2(W3B,MSB);
 wbday4 = diffR2(W4B,MSB);
-wbday5 = diffR2(W5B,MSB);
+wbday5 = diffR2(W10B,MSB);
 wbday6 = diffR2(W6B,MSB);
 wbday7 = diffR2(W7B,MSB);
 
@@ -1045,7 +1156,7 @@ D1B = batchB(D1S);
 D2B = batchB(D2S);
 D3B = batchB(D3S);
 D4B = batchB(D4S);
-D5B = batchB(D5S);
+D10B = batchB(D5S);
 D6B = batchB(D6S);
 D7B = batchB(D7S);
 
@@ -1054,7 +1165,7 @@ dbday1 = diffR2(D1B,MSB);
 dbday2 = diffR2(D2B,MSB);
 dbday3 = diffR2(D3B,MSB);
 dbday4 = diffR2(D4B,MSB);
-dbday5 = diffR2(D5B,MSB);
+dbday5 = diffR2(D10B,MSB);
 dbday6 = diffR2(D6B,MSB);
 dbday7 = diffR2(D7B,MSB);
 
@@ -1066,7 +1177,7 @@ N1B = batchB(N1S);
 N2B = batchB(N2S);
 N3B = batchB(N3S);
 N4B = batchB(N4S);
-N5B = batchB(N5S);
+N10B = batchB(N5S);
 N6B = batchB(N6S);
 N7B = batchB(N7S);
 
@@ -1075,7 +1186,7 @@ nbday1 = diffR2(N1B,MSB);
 nbday2 = diffR2(N2B,MSB);
 nbday3 = diffR2(N3B,MSB);
 nbday4 = diffR2(N4B,MSB);
-nbday5 = diffR2(N5B,MSB);
+nbday5 = diffR2(N10B,MSB);
 nbday6 = diffR2(N6B,MSB);
 nbday7 = diffR2(N7B,MSB);
 
@@ -1087,7 +1198,7 @@ L1B = batchB(L1S);
 L2B = batchB(L2S);
 L3B = batchB(L3S);
 L4B = batchB(L4S);
-L5B = batchB(L5S);
+L10B = batchB(L5S);
 L6B = batchB(L6S);
 L7B = batchB(L7S);
 
@@ -1096,7 +1207,7 @@ lbday1 = diffR2(L1B,MSB);
 lbday2 = diffR2(L2B,MSB);
 lbday3 = diffR2(L3B,MSB);
 lbday4 = diffR2(L4B,MSB);
-lbday5 = diffR2(L5B,MSB);
+lbday5 = diffR2(L10B,MSB);
 lbday6 = diffR2(L6B,MSB);
 lbday7 = diffR2(L7B,MSB);
 
@@ -1108,7 +1219,7 @@ S1B = batchB(S1S);
 S2B = batchB(S2S);
 S3B = batchB(S3S);
 S4B = batchB(S4S);
-S5B = batchB(S5S);
+S10B = batchB(S5S);
 S6B = batchB(S6S);
 S7B = batchB(S7S);
 
@@ -1117,7 +1228,7 @@ sbday1 = diffR2(S1B,MSB);
 sbday2 = diffR2(S2B,MSB);
 sbday3 = diffR2(S3B,MSB);
 sbday4 = diffR2(S4B,MSB);
-sbday5 = diffR2(S5B,MSB);
+sbday5 = diffR2(S10B,MSB);
 sbday6 = diffR2(S6B,MSB);
 sbday7 = diffR2(S7B,MSB);
 
@@ -1129,7 +1240,7 @@ A1B = batchB(A1S);
 A2B = batchB(A2S);
 A3B = batchB(A3S);
 A4B = batchB(A4S);
-A5B = batchB(A5S);
+A10B = batchB(A5S);
 A6B = batchB(A6S);
 A7B = batchB(A7S);
 
@@ -1138,11 +1249,124 @@ abday1 = diffR2(A1B,MSB);
 abday2 = diffR2(A2B,MSB);
 abday3 = diffR2(A3B,MSB);
 abday4 = diffR2(A4B,MSB);
-abday5 = diffR2(A5B,MSB);
+abday5 = diffR2(A10B,MSB);
 abday6 = diffR2(A6B,MSB);
 abday7 = diffR2(A7B,MSB);
 
 abmean = [abday0(:,1); abday1(:,1); abday2(:,1); abday3(:,1); abday4(:,1); abday5(:,1); abday6(:,1); abday7(:,1)];
+
+
+%WELCH
+CuWb0 = Welch(cbday0(:,1), bday0(:,1), cbday0(:,5), bday0(:,5));
+CuWb1 = Welch(cbday1(:,1), bday1(:,1), cbday1(:,5), bday1(:,5));
+CuWb2 = Welch(cbday2(:,1), bday2(:,1), cbday2(:,5), bday2(:,5));
+CuWb3 = Welch(cbday3(:,1), bday3(:,1), cbday3(:,5), bday3(:,5));
+CuWb4 = Welch(cbday4(:,1), bday4(:,1), cbday4(:,5), bday4(:,5));
+CuWb5 = Welch(cbday5(:,1), bday5(:,1), cbday5(:,5), bday5(:,5));
+CuWb6 = Welch(cbday6(:,1), bday6(:,1), cbday6(:,5), bday6(:,5));
+CuWb7 = Welch(cbday7(:,1), bday7(:,1), cbday7(:,5), bday7(:,5));
+CuWB = [CuWb0; CuWb1; CuWb2; CuWb3; CuWb4; CuWb5; CuWb6; CuWb7];
+
+ZnWb0 = Welch(cbday0(:,1), zbday0(:,1), cbday0(:,5), zbday0(:,5));
+ZnWb1 = Welch(cbday1(:,1), zbday1(:,1), cbday1(:,5), zbday1(:,5));
+ZnWb2 = Welch(cbday2(:,1), zbday2(:,1), cbday2(:,5), zbday2(:,5));
+ZnWb3 = Welch(cbday3(:,1), zbday3(:,1), cbday3(:,5), zbday3(:,5));
+ZnWb4 = Welch(cbday4(:,1), zbday4(:,1), cbday4(:,5), zbday4(:,5));
+ZnWb5 = Welch(cbday5(:,1), zbday5(:,1), cbday5(:,5), zbday5(:,5));
+ZnWb6 = Welch(cbday6(:,1), zbday6(:,1), cbday6(:,5), zbday6(:,5));
+ZnWb7 = Welch(cbday7(:,1), zbday7(:,1), cbday7(:,5), zbday7(:,5));
+ZnWB = [ZnWg0; ZnWg1; ZnWg2;ZnWg3; ZnWg4; ZnWg5; ZnWg6; ZnWg7];  
+
+PbWb0 = Welch(cbday0(:,1), pbday0(:,1), cbday0(:,5), pbday0(:,5));
+PbWb1 = Welch(cbday1(:,1), pbday1(:,1), cbday1(:,5), pbday1(:,5));
+PbWb2 = Welch(cbday2(:,1), pbday2(:,1), cbday2(:,5), pbday2(:,5));
+PbWb3 = Welch(cbday3(:,1), pbday3(:,1), cbday3(:,5), pbday3(:,5));
+PbWb4 = Welch(cbday4(:,1), pbday4(:,1), cbday4(:,5), pbday4(:,5));
+PbWb5 = Welch(cbday5(:,1), pbday5(:,1), cbday5(:,5), pbday5(:,5));
+PbWb6 = Welch(cbday6(:,1), pbday6(:,1), cbday6(:,5), pbday6(:,5));
+PbWb7 = Welch(cbday7(:,1), pbday7(:,1), cbday7(:,5), pbday7(:,5));
+PbWB = [PbWg0; PbWg1; PbWg2; PbWg3; PbWg4; PbWg5; PbWg6; PbWg7];
+
+MxWb0 = Welch(cbday0(:,1), mbday0(:,1), cbday0(:,5), mbday0(:,5));
+MxWb1 = Welch(cbday1(:,1), mbday1(:,1), cbday1(:,5), mbday1(:,5));
+MxWb2 = Welch(cbday2(:,1), mbday2(:,1), cbday2(:,5), mbday2(:,5));
+MxWb3 = Welch(cbday3(:,1), mbday3(:,1), cbday3(:,5), mbday3(:,5));
+MxWb4 = Welch(cbday4(:,1), mbday4(:,1), cbday4(:,5), mbday4(:,5));
+MxWb5 = Welch(cbday5(:,1), mbday5(:,1), cbday5(:,5), mbday5(:,5));
+MxWb6 = Welch(cbday6(:,1), mbday6(:,1), cbday6(:,5), mbday6(:,5));
+MxWb7 = Welch(cbday7(:,1), mbday7(:,1), cbday7(:,5), mbday7(:,5));
+MxWB = [MxWg0; MxWg1; MxWg2; MxWg3; MxWg4; MxWg5; MxWg6; MxWg7];
+
+WWb0 = Welch(cbday0(:,1), wbday0(:,1), cbday0(:,5), wbday0(:,5));
+WWb1 = Welch(cbday1(:,1), wbday1(:,1), cbday1(:,5), wbday1(:,5));
+WWb2 = Welch(cbday2(:,1), wbday2(:,1), cbday2(:,5), wbday2(:,5));
+WWb3 = Welch(cbday3(:,1), wbday3(:,1), cbday3(:,5), wbday3(:,5));
+WWb4 = Welch(cbday4(:,1), wbday4(:,1), cbday4(:,5), wbday4(:,5));
+WWb5 = Welch(cbday5(:,1), wbday5(:,1), cbday5(:,5), wbday5(:,5));
+WWb6 = Welch(cbday6(:,1), wbday6(:,1), cbday6(:,5), wbday6(:,5));
+WWb7 = Welch(cbday7(:,1), wbday7(:,1), cbday7(:,5), wbday7(:,5));
+WWB = [WWg0; WWg1; WWg2; WWg3; WWg4; WWg5; WWg6; WWg7];  
+
+DWb0 = Welch(cbday0(:,1), dbday0(:,1), cbday0(:,5), dbday0(:,5));
+DWb1 = Welch(cbday1(:,1), dbday1(:,1), cbday1(:,5), dbday1(:,5));
+DWb2 = Welch(cbday2(:,1), dbday2(:,1), cbday2(:,5), dbday2(:,5));
+DWb3 = Welch(cbday3(:,1), dbday3(:,1), cbday3(:,5), dbday3(:,5));
+DWb4 = Welch(cbday4(:,1), dbday4(:,1), cbday4(:,5), dbday4(:,5));
+DWb5 = Welch(cbday5(:,1), dbday5(:,1), cbday5(:,5), dbday5(:,5));
+DWb6 = Welch(cbday6(:,1), dbday6(:,1), cbday6(:,5), dbday6(:,5));
+DWb7 = Welch(cbday7(:,1), dbday7(:,1), cbday7(:,5), dbday7(:,5));
+DWB = [DWg0; DWg1; DWg2; DWg3; DWg4; DWg5; DWg6; DWg7];
+
+NWb0 = Welch(cbday0(:,1), nbday0(:,1), cbday0(:,5), nbday0(:,5));
+NWb1 = Welch(cbday1(:,1), nbday1(:,1), cbday1(:,5), nbday1(:,5));
+NWb2 = Welch(cbday2(:,1), nbday2(:,1), cbday2(:,5), nbday2(:,5));
+NWb3 = Welch(cbday3(:,1), nbday3(:,1), cbday3(:,5), nbday3(:,5));
+NWb4 = Welch(cbday4(:,1), nbday4(:,1), cbday4(:,5), nbday4(:,5));
+NWb5 = Welch(cbday5(:,1), nbday5(:,1), cbday5(:,5), nbday5(:,5));
+NWb6 = Welch(cbday6(:,1), nbday6(:,1), cbday6(:,5), nbday6(:,5));
+NWb7 = Welch(cbday7(:,1), nbday7(:,1), cbday7(:,5), nbday7(:,5));
+NWB = [NWg0; NWg1; NWg2; NWg3; NWg4; NWg5; NWg6; NWg7];   
+
+LWb0 = Welch(cbday0(:,1), lbday0(:,1), cbday0(:,5), lbday0(:,5));
+LWb1 = Welch(cbday1(:,1), lbday1(:,1), cbday1(:,5), lbday1(:,5));
+LWb2 = Welch(cbday2(:,1), lbday2(:,1), cbday2(:,5), lbday2(:,5));
+LWb3 = Welch(cbday3(:,1), lbday3(:,1), cbday3(:,5), lbday3(:,5));
+LWb4 = Welch(cbday4(:,1), lbday4(:,1), cbday4(:,5), lbday4(:,5));
+LWb5 = Welch(cbday5(:,1), lbday5(:,1), cbday5(:,5), lbday5(:,5));
+LWb6 = Welch(cbday6(:,1), lbday6(:,1), cbday6(:,5), lbday6(:,5));
+LWb7 = Welch(cbday7(:,1), lbday7(:,1), cbday7(:,5), lbday7(:,5));
+LWB = [LWg0; LWg1; LWg2; LWg3; LWg4; LWg5; LWg6; LWg7];
+
+SWb0 = Welch(cbday0(:,1), sbday0(:,1), cbday0(:,5), sbday0(:,5));
+SWb1 = Welch(cbday1(:,1), sbday1(:,1), cbday1(:,5), sbday1(:,5));
+SWb2 = Welch(cbday2(:,1), sbday2(:,1), cbday2(:,5), sbday2(:,5));
+SWb3 = Welch(cbday3(:,1), sbday3(:,1), cbday3(:,5), sbday3(:,5));
+SWb4 = Welch(cbday4(:,1), sbday4(:,1), cbday4(:,5), sbday4(:,5));
+SWb5 = Welch(cbday5(:,1), sbday5(:,1), cbday5(:,5), sbday5(:,5));
+SWb6 = Welch(cbday6(:,1), sbday6(:,1), cbday6(:,5), sbday6(:,5));
+SWb7 = Welch(cbday7(:,1), sbday7(:,1), cbday7(:,5), sbday7(:,5));
+SWB = [SWg0; SWg1; SWg2; SWg3; SWg4; SWg5; SWg6; SWg7];
+
+AWb0 = Welch(cbday0(:,1), abday0(:,1), cbday0(:,5), abday0(:,5));
+AWb1 = Welch(cbday1(:,1), abday1(:,1), cbday1(:,5), abday1(:,5));
+AWb2 = Welch(cbday2(:,1), abday2(:,1), cbday2(:,5), abday2(:,5));
+AWb3 = Welch(cbday3(:,1), abday3(:,1), cbday3(:,5), abday3(:,5));
+AWb4 = Welch(cbday4(:,1), abday4(:,1), cbday4(:,5), abday4(:,5));
+AWb5 = Welch(cbday5(:,1), abday5(:,1), cbday5(:,5), abday5(:,5));
+AWb6 = Welch(cbday6(:,1), abday6(:,1), cbday6(:,5), abday6(:,5));
+AWb7 = Welch(cbday7(:,1), abday7(:,1), cbday7(:,5), abday7(:,5));
+AWB = [AWg0; AWg1; AWg2; AWg3; AWg4; AWg5; AWg6; AWg7];
+
+TCu = [CuWR(:,1) CuWR(:,3) CuWR(:,4) CuWG(:,1) CuWG(:,3) CuWG(:,4) CuWB(:,1) CuWB(:,3) CuWB(:,4)];
+TZn = [ZnWR(:,1) ZnWR(:,3) ZnWR(:,4) ZnWG(:,1) ZnWG(:,3) ZnWG(:,4) ZnWB(:,1) ZnWB(:,3) ZnWB(:,4)];
+TPb = [PbWR(:,1) PbWR(:,3) PbWR(:,4) PbWG(:,1) PbWG(:,3) PbWG(:,4) PbWB(:,1) PbWB(:,3) PbWB(:,4)];
+TMx = [MxWR(:,1) MxWR(:,3) MxWR(:,4) MxWG(:,1) MxWG(:,3) MxWG(:,4) MxWB(:,1) MxWB(:,3) MxWB(:,4)];
+TW = [WWR(:,1) WWR(:,3) WWR(:,4) WWG(:,1) WWG(:,3) WWG(:,4) WWB(:,1) WWB(:,3) WWB(:,4)];
+TD = [DWR(:,1) DWR(:,3) DWR(:,4) DWG(:,1) DWG(:,3) DWG(:,4) DWB(:,1) DWB(:,3) DWB(:,4)];
+TN = [NWR(:,1) NWR(:,3) NWR(:,4) NWG(:,1) NWG(:,3) NWG(:,4) NWB(:,1) NWB(:,3) NWB(:,4)];
+TL = [LWR(:,1) LWR(:,3) LWR(:,4) LWG(:,1) LWG(:,3) LWG(:,4) LWB(:,1) LWB(:,3) LWB(:,4)];
+TS = [SWR(:,1) SWR(:,3) SWR(:,4) SWG(:,1) SWG(:,3) SWG(:,4) SWB(:,1) SWB(:,3) SWB(:,4)];
+TA = [AWR(:,1) AWR(:,3) AWR(:,4) AWG(:,1) AWG(:,3) AWG(:,4) AWB(:,1) AWB(:,3) AWB(:,4)];
 
 %metal only
 x = (0:7);
@@ -1195,7 +1419,6 @@ xlabel('Time(days)')
 %ylabel('Intersection Difference (Density)')
 axis([0 7 0 .65]);
 hold off
-
 
 
 %ratio bars

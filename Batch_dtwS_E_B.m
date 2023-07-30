@@ -1,6 +1,6 @@
 %This code is for just running the dtw comparisons for single color
 
-MasterC = 'E:\Batch\5B\Control';
+MasterC = 'E:\Batch\10B\Control';
 MasterCS = imageDatastore(MasterC);
 MCR = batchMR(MasterCS);
 MSR = batchR(MasterCS);
@@ -10,14 +10,14 @@ MSR = batchR(MasterCS);
 %DTW2 = dtw2(MCR,Cu0R(:,1),(MCR-Cu0R(:,1)));
 
 %copper trial 1
-CuC = 'E:\Batch\5B\T1Cu\0';
-Cu1 = 'E:\Batch\5B\T1Cu\1';
-Cu2 = 'E:\Batch\5B\T1Cu\2';
-Cu3 = 'E:\Batch\5B\T1Cu\3';
-Cu4 = 'E:\Batch\5B\T1Cu\4';
-Cu5 = 'E:\Batch\5B\T1Cu\5';
-Cu6 = 'E:\Batch\5B\T1Cu\6';
-Cu7 = 'E:\Batch\5B\T1Cu\7';
+CuC = 'E:\Batch\10B\T1Cu\0';
+Cu1 = 'E:\Batch\10B\T1Cu\1';
+Cu2 = 'E:\Batch\10B\T1Cu\2';
+Cu3 = 'E:\Batch\10B\T1Cu\3';
+Cu4 = 'E:\Batch\10B\T1Cu\4';
+Cu5 = 'E:\Batch\10B\T1Cu\5';
+Cu6 = 'E:\Batch\10B\T1Cu\6';
+Cu7 = 'E:\Batch\10B\T1Cu\7';
 CuCS = imageDatastore(CuC);
 Cu1S = imageDatastore(Cu1);
 Cu2S = imageDatastore(Cu2);
@@ -50,14 +50,14 @@ CuDTWRstd2 = [CuDTW0R(:,2); CuDTW1R(:,2); CuDTW2R(:,2); CuDTW3R(:,2); CuDTW4R(:,
 CuDTWRstd3 = [CuDTW0R(:,3); CuDTW1R(:,3); CuDTW2R(:,3); CuDTW3R(:,3); CuDTW4R(:,3); CuDTW5R(:,3); CuDTW6R(:,3); CuDTW7R(:,3)];
 
 %zinc trial 2
-ZnC = 'E:\Batch\5B\T2Zn\0';
-Zn1 = 'E:\Batch\5B\T2Zn\1';
-Zn2 = 'E:\Batch\5B\T2Zn\2';
-Zn3 = 'E:\Batch\5B\T2Zn\3';
-Zn4 = 'E:\Batch\5B\T2Zn\4';
-Zn5 = 'E:\Batch\5B\T2Zn\5';
-Zn6 = 'E:\Batch\5B\T2Zn\6';
-Zn7 = 'E:\Batch\5B\T2Zn\7';
+ZnC = 'E:\Batch\10B\T2Zn\0';
+Zn1 = 'E:\Batch\10B\T2Zn\1';
+Zn2 = 'E:\Batch\10B\T2Zn\2';
+Zn3 = 'E:\Batch\10B\T2Zn\3';
+Zn4 = 'E:\Batch\10B\T2Zn\4';
+Zn5 = 'E:\Batch\10B\T2Zn\5';
+Zn6 = 'E:\Batch\10B\T2Zn\6';
+Zn7 = 'E:\Batch\10B\T2Zn\7';
 ZnCS = imageDatastore(ZnC);
 Zn1S = imageDatastore(Zn1);
 Zn2S = imageDatastore(Zn2);
@@ -90,14 +90,14 @@ ZnDTWRstd2 = [ZnDTW0R(:,2); ZnDTW1R(:,2); ZnDTW2R(:,2); ZnDTW3R(:,2); ZnDTW4R(:,
 ZnDTWRstd3 = [ZnDTW0R(:,3); ZnDTW1R(:,3); ZnDTW2R(:,3); ZnDTW3R(:,3); ZnDTW4R(:,3); ZnDTW5R(:,3); ZnDTW6R(:,3); ZnDTW7R(:,3)];
 
 %lead trial 3
-PbC = 'E:\Batch\5B\T3Pb\0';
-Pb1 = 'E:\Batch\5B\T3Pb\1';
-Pb2 = 'E:\Batch\5B\T3Pb\2';
-Pb3 = 'E:\Batch\5B\T3Pb\3';
-Pb4 = 'E:\Batch\5B\T3Pb\4';
-Pb5 = 'E:\Batch\5B\T3Pb\5';
-Pb6 = 'E:\Batch\5B\T3Pb\6';
-Pb7 = 'E:\Batch\5B\T3Pb\7';
+PbC = 'E:\Batch\10B\T3Pb\0';
+Pb1 = 'E:\Batch\10B\T3Pb\1';
+Pb2 = 'E:\Batch\10B\T3Pb\2';
+Pb3 = 'E:\Batch\10B\T3Pb\3';
+Pb4 = 'E:\Batch\10B\T3Pb\4';
+Pb5 = 'E:\Batch\10B\T3Pb\5';
+Pb6 = 'E:\Batch\10B\T3Pb\6';
+Pb7 = 'E:\Batch\10B\T3Pb\7';
 PbCS = imageDatastore(PbC);
 Pb1S = imageDatastore(Pb1);
 Pb2S = imageDatastore(Pb2);
@@ -129,14 +129,14 @@ PbDTWRstd2 = [PbDTW0R(:,2); PbDTW1R(:,2); PbDTW2R(:,2); PbDTW3R(:,2); PbDTW4R(:,
 PbDTWRstd3 = [PbDTW0R(:,3); PbDTW1R(:,3); PbDTW2R(:,3); PbDTW3R(:,3); PbDTW4R(:,3); PbDTW5R(:,3); PbDTW6R(:,3); PbDTW7R(:,3)];
 
 %Mix - Trial 4
-MC = 'E:\Batch\5B\T4Mix\0';
-M1 = 'E:\Batch\5B\T4Mix\1';
-M2 = 'E:\Batch\5B\T4Mix\2';
-M3 = 'E:\Batch\5B\T4Mix\3';
-M4 = 'E:\Batch\5B\T4Mix\4';
-M5 = 'E:\Batch\5B\T4Mix\5';
-M6 = 'E:\Batch\5B\T4Mix\6';
-M7 = 'E:\Batch\5B\T4Mix\7';
+MC = 'E:\Batch\10B\T4Mix\0';
+M1 = 'E:\Batch\10B\T4Mix\1';
+M2 = 'E:\Batch\10B\T4Mix\2';
+M3 = 'E:\Batch\10B\T4Mix\3';
+M4 = 'E:\Batch\10B\T4Mix\4';
+M5 = 'E:\Batch\10B\T4Mix\5';
+M6 = 'E:\Batch\10B\T4Mix\6';
+M7 = 'E:\Batch\10B\T4Mix\7';
 MCS = imageDatastore(MC);
 M1S = imageDatastore(M1);
 M2S = imageDatastore(M2);
@@ -168,14 +168,14 @@ MDTWRstd2 = [MDTW0R(:,2); MDTW1R(:,2); MDTW2R(:,2); MDTW3R(:,2); MDTW4R(:,2); MD
 MDTWRstd3 = [MDTW0R(:,3); MDTW1R(:,3); MDTW2R(:,3); MDTW3R(:,3); MDTW4R(:,3); MDTW5R(:,3); MDTW6R(:,3); MDTW7R(:,3)];
 
 %Control for comparison
-CC = 'E:\Batch\5B\T5Con\0';
-C1 = 'E:\Batch\5B\T5Con\1';
-C2 = 'E:\Batch\5B\T5Con\2';
-C3 = 'E:\Batch\5B\T5Con\3';
-C4 = 'E:\Batch\5B\T5Con\4';
-C5 = 'E:\Batch\5B\T5Con\5';
-C6 = 'E:\Batch\5B\T5Con\6';
-C7 = 'E:\Batch\5B\T5Con\7';
+CC = 'E:\Batch\10B\T5Con\0';
+C1 = 'E:\Batch\10B\T5Con\1';
+C2 = 'E:\Batch\10B\T5Con\2';
+C3 = 'E:\Batch\10B\T5Con\3';
+C4 = 'E:\Batch\10B\T5Con\4';
+C5 = 'E:\Batch\10B\T5Con\5';
+C6 = 'E:\Batch\10B\T5Con\6';
+C7 = 'E:\Batch\10B\T5Con\7';
 CCS = imageDatastore(CC);
 C1S = imageDatastore(C1);
 C2S = imageDatastore(C2);
@@ -213,14 +213,14 @@ Contstd2 = ContM + (2.*Contstd')
 Contstd3 = ContM + (3.*Contstd')
 
 %Wet - Trial 6
-WC = 'E:\Batch\5B\T6Wet\0';
-W1 = 'E:\Batch\5B\T6Wet\1';
-W2 = 'E:\Batch\5B\T6Wet\2';
-W3 = 'E:\Batch\5B\T6Wet\3';
-W4 = 'E:\Batch\5B\T6Wet\4';
-W5 = 'E:\Batch\5B\T6Wet\5';
-W6 = 'E:\Batch\5B\T6Wet\6';
-W7 = 'E:\Batch\5B\T6Wet\7';
+WC = 'E:\Batch\10B\T6Wet\0';
+W1 = 'E:\Batch\10B\T6Wet\1';
+W2 = 'E:\Batch\10B\T6Wet\2';
+W3 = 'E:\Batch\10B\T6Wet\3';
+W4 = 'E:\Batch\10B\T6Wet\4';
+W5 = 'E:\Batch\10B\T6Wet\5';
+W6 = 'E:\Batch\10B\T6Wet\6';
+W7 = 'E:\Batch\10B\T6Wet\7';
 WCS = imageDatastore(WC);
 W1S = imageDatastore(W1);
 W2S = imageDatastore(W2);
@@ -252,14 +252,14 @@ WDTWRstd2 = [WDTW0R(:,2); WDTW1R(:,2); WDTW2R(:,2); WDTW3R(:,2); WDTW4R(:,2); WD
 WDTWRstd3 = [WDTW0R(:,3); WDTW1R(:,3); WDTW2R(:,3); WDTW3R(:,3); WDTW4R(:,3); WDTW5R(:,3); WDTW6R(:,3); WDTW7R(:,3)];
 
 %Dry - Trial 7
-DC = 'E:\Batch\5B\T7Dry\0';
-D1 = 'E:\Batch\5B\T7Dry\1';
-D2 = 'E:\Batch\5B\T7Dry\2';
-D3 = 'E:\Batch\5B\T7Dry\3';
-D4 = 'E:\Batch\5B\T7Dry\4';
-D5 = 'E:\Batch\5B\T7Dry\5';
-D6 = 'E:\Batch\5B\T7Dry\6';
-D7 = 'E:\Batch\5B\T7Dry\7';
+DC = 'E:\Batch\10B\T7Dry\0';
+D1 = 'E:\Batch\10B\T7Dry\1';
+D2 = 'E:\Batch\10B\T7Dry\2';
+D3 = 'E:\Batch\10B\T7Dry\3';
+D4 = 'E:\Batch\10B\T7Dry\4';
+D5 = 'E:\Batch\10B\T7Dry\5';
+D6 = 'E:\Batch\10B\T7Dry\6';
+D7 = 'E:\Batch\10B\T7Dry\7';
 DCS = imageDatastore(DC);
 D1S = imageDatastore(D1);
 D2S = imageDatastore(D2);
@@ -291,14 +291,14 @@ DDTWRstd2 = [DDTW0R(:,2); DDTW1R(:,2); DDTW2R(:,2); DDTW3R(:,2); DDTW4R(:,2); DD
 DDTWRstd3 = [DDTW0R(:,3); DDTW1R(:,3); DDTW2R(:,3); DDTW3R(:,3); DDTW4R(:,3); DDTW5R(:,3); DDTW6R(:,3); DDTW7R(:,3)];
 
 %Nutrients - Trial 8
-NC = 'E:\Batch\5B\T8Nut\0';
-N1 = 'E:\Batch\5B\T8Nut\1';
-N2 = 'E:\Batch\5B\T8Nut\2';
-N3 = 'E:\Batch\5B\T8Nut\3';
-N4 = 'E:\Batch\5B\T8Nut\4';
-N5 = 'E:\Batch\5B\T8Nut\5';
-N6 = 'E:\Batch\5B\T8Nut\6';
-N7 = 'E:\Batch\5B\T8Nut\7';
+NC = 'E:\Batch\10B\T8Nut\0';
+N1 = 'E:\Batch\10B\T8Nut\1';
+N2 = 'E:\Batch\10B\T8Nut\2';
+N3 = 'E:\Batch\10B\T8Nut\3';
+N4 = 'E:\Batch\10B\T8Nut\4';
+N5 = 'E:\Batch\10B\T8Nut\5';
+N6 = 'E:\Batch\10B\T8Nut\6';
+N7 = 'E:\Batch\10B\T8Nut\7';
 NCS = imageDatastore(NC);
 N1S = imageDatastore(N1);
 N2S = imageDatastore(N2);
@@ -330,14 +330,14 @@ NDTWRstd2 = [NDTW0R(:,2); NDTW1R(:,2); NDTW2R(:,2); NDTW3R(:,2); NDTW4R(:,2); ND
 NDTWRstd3 = [NDTW0R(:,3); NDTW1R(:,3); NDTW2R(:,3); NDTW3R(:,3); NDTW4R(:,3); NDTW5R(:,3); NDTW6R(:,3); NDTW7R(:,3)];
 
 %Long - Trial 9
-LC = 'E:\Batch\5B\T9Long\0';
-L1 = 'E:\Batch\5B\T9Long\1';
-L2 = 'E:\Batch\5B\T9Long\2';
-L3 = 'E:\Batch\5B\T9Long\3';
-L4 = 'E:\Batch\5B\T9Long\4';
-L5 = 'E:\Batch\5B\T9Long\5';
-L6 = 'E:\Batch\5B\T9Long\6';
-L7 = 'E:\Batch\5B\T9Long\7';
+LC = 'E:\Batch\10B\T9Long\0';
+L1 = 'E:\Batch\10B\T9Long\1';
+L2 = 'E:\Batch\10B\T9Long\2';
+L3 = 'E:\Batch\10B\T9Long\3';
+L4 = 'E:\Batch\10B\T9Long\4';
+L5 = 'E:\Batch\10B\T9Long\5';
+L6 = 'E:\Batch\10B\T9Long\6';
+L7 = 'E:\Batch\10B\T9Long\7';
 LCS = imageDatastore(LC);
 L1S = imageDatastore(L1);
 L2S = imageDatastore(L2);
@@ -369,14 +369,14 @@ LDTWRstd2 = [LDTW0R(:,2); LDTW1R(:,2); LDTW2R(:,2); LDTW3R(:,2); LDTW4R(:,2); LD
 LDTWRstd3 = [LDTW0R(:,3); LDTW1R(:,3); LDTW2R(:,3); LDTW3R(:,3); LDTW4R(:,3); LDTW5R(:,3); LDTW6R(:,3); LDTW7R(:,3)];
 
 %Short - Trial 10
-SC = 'E:\Batch\5B\T10Shrt\0';
-S1 = 'E:\Batch\5B\T10Shrt\1';
-S2 = 'E:\Batch\5B\T10Shrt\2';
-S3 = 'E:\Batch\5B\T10Shrt\3';
-S4 = 'E:\Batch\5B\T10Shrt\4';
-S5 = 'E:\Batch\5B\T10Shrt\5';
-S6 = 'E:\Batch\5B\T10Shrt\6';
-S7 = 'E:\Batch\5B\T10Shrt\7';
+SC = 'E:\Batch\10B\T10Shrt\0';
+S1 = 'E:\Batch\10B\T10Shrt\1';
+S2 = 'E:\Batch\10B\T10Shrt\2';
+S3 = 'E:\Batch\10B\T10Shrt\3';
+S4 = 'E:\Batch\10B\T10Shrt\4';
+S5 = 'E:\Batch\10B\T10Shrt\5';
+S6 = 'E:\Batch\10B\T10Shrt\6';
+S7 = 'E:\Batch\10B\T10Shrt\7';
 SCS = imageDatastore(SC);
 S1S = imageDatastore(S1);
 S2S = imageDatastore(S2);
@@ -408,14 +408,14 @@ SDTWRstd2 = [SDTW0R(:,2); SDTW1R(:,2); SDTW2R(:,2); SDTW3R(:,2); SDTW4R(:,2); SD
 SDTWRstd3 = [SDTW0R(:,3); SDTW1R(:,3); SDTW2R(:,3); SDTW3R(:,3); SDTW4R(:,3); SDTW5R(:,3); SDTW6R(:,3); SDTW7R(:,3)];
 
 %Dark - Trial 11
-AC = 'E:\Batch\5B\T11Dark\0';
-A1 = 'E:\Batch\5B\T11Dark\1';
-A2 = 'E:\Batch\5B\T11Dark\2';
-A3 = 'E:\Batch\5B\T11Dark\3';
-A4 = 'E:\Batch\5B\T11Dark\4';
-A5 = 'E:\Batch\5B\T11Dark\5';
-A6 = 'E:\Batch\5B\T11Dark\6';
-A7 = 'E:\Batch\5B\T11Dark\7';
+AC = 'E:\Batch\10B\T11Dark\0';
+A1 = 'E:\Batch\10B\T11Dark\1';
+A2 = 'E:\Batch\10B\T11Dark\2';
+A3 = 'E:\Batch\10B\T11Dark\3';
+A4 = 'E:\Batch\10B\T11Dark\4';
+A5 = 'E:\Batch\10B\T11Dark\5';
+A6 = 'E:\Batch\10B\T11Dark\6';
+A7 = 'E:\Batch\10B\T11Dark\7';
 ACS = imageDatastore(AC);
 A1S = imageDatastore(A1);
 A2S = imageDatastore(A2);
@@ -763,7 +763,7 @@ Cu1B = batchB(Cu1S);
 Cu2B = batchB(Cu2S);
 Cu3B = batchB(Cu3S);
 Cu4B = batchB(Cu4S);
-Cu5B = batchB(Cu5S);
+Cu10B = batchB(Cu5S);
 Cu6B = batchB(Cu6S);
 Cu7B = batchB(Cu7S);
 
@@ -772,12 +772,12 @@ CuDTW1B = one(MSB,Cu1B);
 CuDTW2B = one(MSB,Cu2B);
 CuDTW3B = one(MSB,Cu3B);
 CuDTW4B = one(MSB,Cu4B);
-CuDTW5B = one(MSB,Cu5B);
+CuDTW10B = one(MSB,Cu10B);
 CuDTW6B = one(MSB,Cu6B);
 CuDTW7B = one(MSB,Cu7B);
 
-CuDTWB = [CuDTW0B(:,1); CuDTW1B(:,1); CuDTW2B(:,1); CuDTW3B(:,1); CuDTW4B(:,1); CuDTW5B(:,1); CuDTW6B(:,1); CuDTW7B(:,1)];
-%CuDTWB4 = [CuDTW0B(:,4); CuDTW1B(:,4); CuDTW2B(:,4); CuDTW3B(:,4); CuDTW4B(:,4); CuDTW5B(:,4); CuDTW6B(:,4); CuDTW7B(:,4)];
+CuDTWB = [CuDTW0B(:,1); CuDTW1B(:,1); CuDTW2B(:,1); CuDTW3B(:,1); CuDTW4B(:,1); CuDTW10B(:,1); CuDTW6B(:,1); CuDTW7B(:,1)];
+%CuDTWB4 = [CuDTW0B(:,4); CuDTW1B(:,4); CuDTW2B(:,4); CuDTW3B(:,4); CuDTW4B(:,4); CuDTW10B(:,4); CuDTW6B(:,4); CuDTW7B(:,4)];
 
 %zinc trial 2
 Zn0B = batchB(ZnCS);
@@ -785,7 +785,7 @@ Zn1B = batchB(Zn1S);
 Zn2B = batchB(Zn2S);
 Zn3B = batchB(Zn3S);
 Zn4B = batchB(Zn4S);
-Zn5B = batchB(Zn5S);
+Zn10B = batchB(Zn5S);
 Zn6B = batchB(Zn6S);
 Zn7B = batchB(Zn7S);
 
@@ -794,12 +794,12 @@ ZnDTW1B = one(MSB,Zn1B);
 ZnDTW2B = one(MSB,Zn2B);
 ZnDTW3B = one(MSB,Zn3B);
 ZnDTW4B = one(MSB,Zn4B);
-ZnDTW5B = one(MSB,Zn5B);
+ZnDTW10B = one(MSB,Zn10B);
 ZnDTW6B = one(MSB,Zn6B);
 ZnDTW7B = one(MSB,Zn7B);
 
-ZnDTWB = [ZnDTW0B(:,1); ZnDTW1B(:,1); ZnDTW2B(:,1); ZnDTW3B(:,1); ZnDTW4B(:,1); ZnDTW5B(:,1); ZnDTW6B(:,1); ZnDTW7B(:,1)];
-%ZnDTWB4 = [ZnDTW0B(:,4); ZnDTW1B(:,4); ZnDTW2B(:,4); ZnDTW3B(:,4); ZnDTW4B(:,4); ZnDTW5B(:,4); ZnDTW6B(:,4); ZnDTW7B(:,4)];
+ZnDTWB = [ZnDTW0B(:,1); ZnDTW1B(:,1); ZnDTW2B(:,1); ZnDTW3B(:,1); ZnDTW4B(:,1); ZnDTW10B(:,1); ZnDTW6B(:,1); ZnDTW7B(:,1)];
+%ZnDTWB4 = [ZnDTW0B(:,4); ZnDTW1B(:,4); ZnDTW2B(:,4); ZnDTW3B(:,4); ZnDTW4B(:,4); ZnDTW10B(:,4); ZnDTW6B(:,4); ZnDTW7B(:,4)];
 
 %lead trial 3
 Pb0B = batchB(PbCS);
@@ -807,7 +807,7 @@ Pb1B = batchB(Pb1S);
 Pb2B = batchB(Pb2S);
 Pb3B = batchB(Pb3S);
 Pb4B = batchB(Pb4S);
-Pb5B = batchB(Pb5S);
+Pb10B = batchB(Pb5S);
 Pb6B = batchB(Pb6S);
 Pb7B = batchB(Pb7S);
 
@@ -816,12 +816,12 @@ PbDTW1B = one(MSB,Pb1B);
 PbDTW2B = one(MSB,Pb2B);
 PbDTW3B = one(MSB,Pb3B);
 PbDTW4B = one(MSB,Pb4B);
-PbDTW5B = one(MSB,Pb5B);
+PbDTW10B = one(MSB,Pb10B);
 PbDTW6B = one(MSB,Pb6B);
 PbDTW7B = one(MSB,Pb7B);
 
-PbDTWB = [PbDTW0B(:,1); PbDTW1B(:,1); PbDTW2B(:,1); PbDTW3B(:,1); PbDTW4B(:,1); PbDTW5B(:,1); PbDTW6B(:,1); PbDTW7B(:,1)];
-%PbDTWB4 = [PbDTW0B(:,4); PbDTW1B(:,4); PbDTW2B(:,4); PbDTW3B(:,4); PbDTW4B(:,4); PbDTW5B(:,4); PbDTW6B(:,4); PbDTW7B(:,4)];
+PbDTWB = [PbDTW0B(:,1); PbDTW1B(:,1); PbDTW2B(:,1); PbDTW3B(:,1); PbDTW4B(:,1); PbDTW10B(:,1); PbDTW6B(:,1); PbDTW7B(:,1)];
+%PbDTWB4 = [PbDTW0B(:,4); PbDTW1B(:,4); PbDTW2B(:,4); PbDTW3B(:,4); PbDTW4B(:,4); PbDTW10B(:,4); PbDTW6B(:,4); PbDTW7B(:,4)];
 
 %Mix - Trial 4
 M0B = batchB(MCS);
@@ -829,7 +829,7 @@ M1B = batchB(M1S);
 M2B = batchB(M2S);
 M3B = batchB(M3S);
 M4B = batchB(M4S);
-M5B = batchB(M5S);
+M10B = batchB(M5S);
 M6B = batchB(M6S);
 M7B = batchB(M7S);
 
@@ -838,12 +838,12 @@ MDTW1B = one(MSB,M1B);
 MDTW2B = one(MSB,M2B);
 MDTW3B = one(MSB,M3B);
 MDTW4B = one(MSB,M4B);
-MDTW5B = one(MSB,M5B);
+MDTW10B = one(MSB,M10B);
 MDTW6B = one(MSB,M6B);
 MDTW7B = one(MSB,M7B);
 
-MDTWB = [MDTW0B(:,1); MDTW1B(:,1); MDTW2B(:,1); MDTW3B(:,1); MDTW4B(:,1); MDTW5B(:,1); MDTW6B(:,1); MDTW7B(:,1)];
-%MDTWB4 = [MDTW0B(:,4); MDTW1B(:,4); MDTW2B(:,4); MDTW3B(:,4); MDTW4B(:,4); MDTW5B(:,4); MDTW6B(:,4); MDTW7B(:,4)];
+MDTWB = [MDTW0B(:,1); MDTW1B(:,1); MDTW2B(:,1); MDTW3B(:,1); MDTW4B(:,1); MDTW10B(:,1); MDTW6B(:,1); MDTW7B(:,1)];
+%MDTWB4 = [MDTW0B(:,4); MDTW1B(:,4); MDTW2B(:,4); MDTW3B(:,4); MDTW4B(:,4); MDTW10B(:,4); MDTW6B(:,4); MDTW7B(:,4)];
 
 %Control for comparison
 C0B = batchB(CCS);
@@ -851,7 +851,7 @@ C1B = batchB(C1S);
 C2B = batchB(C2S);
 C3B = batchB(C3S);
 C4B = batchB(C4S);
-C5B = batchB(C5S);
+C10B = batchB(C5S);
 C6B = batchB(C6S);
 C7B = batchB(C7S);
 
@@ -860,11 +860,11 @@ CDTW1B = one(MSB,C1B);
 CDTW2B = one(MSB,C2B);
 CDTW3B = one(MSB,C3B);
 CDTW4B = one(MSB,C4B);
-CDTW5B = one(MSB,C5B);
+CDTW10B = one(MSB,C10B);
 CDTW6B = one(MSB,C6B);
 CDTW7B = one(MSB,C7B);
 
-CDTWB = [CDTW0B(:,1); CDTW1B(:,1); CDTW2B(:,1); CDTW3B(:,1); CDTW4B(:,1); CDTW5B(:,1); CDTW6B(:,1); CDTW7B(:,1)];
+CDTWB = [CDTW0B(:,1); CDTW1B(:,1); CDTW2B(:,1); CDTW3B(:,1); CDTW4B(:,1); CDTW10B(:,1); CDTW6B(:,1); CDTW7B(:,1)];
 
 ContMb = sum(CDTWB)/8
 Contvarb = sum((CDTWB - ContMb).^2)./(7);
@@ -878,7 +878,7 @@ W1B = batchB(W1S);
 W2B = batchB(W2S);
 W3B = batchB(W3S);
 W4B = batchB(W4S);
-W5B = batchB(W5S);
+W10B = batchB(W5S);
 W6B = batchB(W6S);
 W7B = batchB(W7S);
 
@@ -887,11 +887,11 @@ WDTW1B = one(MSB,W1B);
 WDTW2B = one(MSB,W2B);
 WDTW3B = one(MSB,W3B);
 WDTW4B = one(MSB,W4B);
-WDTW5B = one(MSB,W5B);
+WDTW10B = one(MSB,W10B);
 WDTW6B = one(MSB,W6B);
 WDTW7B = one(MSB,W7B);
 
-WDTWB = [WDTW0B(:,1); WDTW1B(:,1); WDTW2B(:,1); WDTW3B(:,1); WDTW4B(:,1); WDTW5B(:,1); WDTW6B(:,1); WDTW7B(:,1)];
+WDTWB = [WDTW0B(:,1); WDTW1B(:,1); WDTW2B(:,1); WDTW3B(:,1); WDTW4B(:,1); WDTW10B(:,1); WDTW6B(:,1); WDTW7B(:,1)];
 
 %Dry - Trial 7
 D0B = batchB(DCS);
@@ -899,7 +899,7 @@ D1B = batchB(D1S);
 D2B = batchB(D2S);
 D3B = batchB(D3S);
 D4B = batchB(D4S);
-D5B = batchB(D5S);
+D10B = batchB(D5S);
 D6B = batchB(D6S);
 D7B = batchB(D7S);
 
@@ -908,11 +908,11 @@ DDTW1B = one(MSB,D1B);
 DDTW2B = one(MSB,D2B);
 DDTW3B = one(MSB,D3B);
 DDTW4B = one(MSB,D4B);
-DDTW5B = one(MSB,D5B);
+DDTW10B = one(MSB,D10B);
 DDTW6B = one(MSB,D6B);
 DDTW7B = one(MSB,D7B);
 
-DDTWB = [DDTW0B(:,1); DDTW1B(:,1); DDTW2B(:,1); DDTW3B(:,1); DDTW4B(:,1); DDTW5B(:,1); DDTW6B(:,1); DDTW7B(:,1)];
+DDTWB = [DDTW0B(:,1); DDTW1B(:,1); DDTW2B(:,1); DDTW3B(:,1); DDTW4B(:,1); DDTW10B(:,1); DDTW6B(:,1); DDTW7B(:,1)];
 
 %Nutrients - Trial 8
 N0B = batchB(NCS);
@@ -920,7 +920,7 @@ N1B = batchB(N1S);
 N2B = batchB(N2S);
 N3B = batchB(N3S);
 N4B = batchB(N4S);
-N5B = batchB(N5S);
+N10B = batchB(N5S);
 N6B = batchB(N6S);
 N7B = batchB(N7S);
 
@@ -929,11 +929,11 @@ NDTW1B = one(MSB,N1B);
 NDTW2B = one(MSB,N2B);
 NDTW3B = one(MSB,N3B);
 NDTW4B = one(MSB,N4B);
-NDTW5B = one(MSB,N5B);
+NDTW10B = one(MSB,N10B);
 NDTW6B = one(MSB,N6B);
 NDTW7B = one(MSB,N7B);
 
-NDTWB = [NDTW0B(:,1); NDTW1B(:,1); NDTW2B(:,1); NDTW3B(:,1); NDTW4B(:,1); NDTW5B(:,1); NDTW6B(:,1); NDTW7B(:,1)];
+NDTWB = [NDTW0B(:,1); NDTW1B(:,1); NDTW2B(:,1); NDTW3B(:,1); NDTW4B(:,1); NDTW10B(:,1); NDTW6B(:,1); NDTW7B(:,1)];
 
 %Long - Trial 9
 L0B = batchB(LCS);
@@ -941,7 +941,7 @@ L1B = batchB(L1S);
 L2B = batchB(L2S);
 L3B = batchB(L3S);
 L4B = batchB(L4S);
-L5B = batchB(L5S);
+L10B = batchB(L5S);
 L6B = batchB(L6S);
 L7B = batchB(L7S);
 
@@ -950,11 +950,11 @@ LDTW1B = one(MSB,L1B);
 LDTW2B = one(MSB,L2B);
 LDTW3B = one(MSB,L3B);
 LDTW4B = one(MSB,L4B);
-LDTW5B = one(MSB,L5B);
+LDTW10B = one(MSB,L10B);
 LDTW6B = one(MSB,L6B);
 LDTW7B = one(MSB,L7B);
 
-LDTWB = [LDTW0B(:,1); LDTW1B(:,1); LDTW2B(:,1); LDTW3B(:,1); LDTW4B(:,1); LDTW5B(:,1); LDTW6B(:,1); LDTW7B(:,1)];
+LDTWB = [LDTW0B(:,1); LDTW1B(:,1); LDTW2B(:,1); LDTW3B(:,1); LDTW4B(:,1); LDTW10B(:,1); LDTW6B(:,1); LDTW7B(:,1)];
 
 %Short - Trial 10
 S0B = batchB(SCS);
@@ -962,7 +962,7 @@ S1B = batchB(S1S);
 S2B = batchB(S2S);
 S3B = batchB(S3S);
 S4B = batchB(S4S);
-S5B = batchB(S5S);
+S10B = batchB(S5S);
 S6B = batchB(S6S);
 S7B = batchB(S7S);
 
@@ -971,11 +971,11 @@ SDTW1B = one(MSB,S1B);
 SDTW2B = one(MSB,S2B);
 SDTW3B = one(MSB,S3B);
 SDTW4B = one(MSB,S4B);
-SDTW5B = one(MSB,S5B);
+SDTW10B = one(MSB,S10B);
 SDTW6B = one(MSB,S6B);
 SDTW7B = one(MSB,S7B);
 
-SDTWB = [SDTW0B(:,1); SDTW1B(:,1); SDTW2B(:,1); SDTW3B(:,1); SDTW4B(:,1); SDTW5B(:,1); SDTW6B(:,1); SDTW7B(:,1)];
+SDTWB = [SDTW0B(:,1); SDTW1B(:,1); SDTW2B(:,1); SDTW3B(:,1); SDTW4B(:,1); SDTW10B(:,1); SDTW6B(:,1); SDTW7B(:,1)];
 
 %Dark - Trial 11
 A0B = batchB(ACS);
@@ -983,7 +983,7 @@ A1B = batchB(A1S);
 A2B = batchB(A2S);
 A3B = batchB(A3S);
 A4B = batchB(A4S);
-A5B = batchB(A5S);
+A10B = batchB(A5S);
 A6B = batchB(A6S);
 A7B = batchB(A7S);
 
@@ -992,11 +992,11 @@ ADTW1B = one(MSB,A1B);
 ADTW2B = one(MSB,A2B);
 ADTW3B = one(MSB,A3B);
 ADTW4B = one(MSB,A4B);
-ADTW5B = one(MSB,A5B);
+ADTW10B = one(MSB,A10B);
 ADTW6B = one(MSB,A6B);
 ADTW7B = one(MSB,A7B);
 
-ADTWB = [ADTW0B(:,1); ADTW1B(:,1); ADTW2B(:,1); ADTW3B(:,1); ADTW4B(:,1); ADTW5B(:,1); ADTW6B(:,1); ADTW7B(:,1)];
+ADTWB = [ADTW0B(:,1); ADTW1B(:,1); ADTW2B(:,1); ADTW3B(:,1); ADTW4B(:,1); ADTW10B(:,1); ADTW6B(:,1); ADTW7B(:,1)];
 
 x = (0:7);
 figure;
@@ -1015,7 +1015,7 @@ yline(Contstd3b,'k:','LineWidth',2);
 %legend('Cu','Zn','Pb','Mix','Mean','2\sigma','3\sigma');
 set(gca,'fontname','arial','fontsize',18,'fontweight','bold');
 xlabel('Time(days)');
-%ylabel('DTW');
+ylabel('DTW');
 axis([0 7 .05 .3]);
 hold off;
 
@@ -1061,149 +1061,3 @@ legend('Cu','Zn','Pb','Mix','Mean','2\sigma','3\sigma');
 set(gca,'fontname','arial','fontsize',18,'fontweight','bold');
 xlabel('Time(days)')
 ylabel('DTW')
-
-
-%ratios
-%ratios
-CuT = CuDTWR + CuDTWG + CuDTWB
-ZnT = ZnDTWR + ZnDTWG + ZnDTWB
-PbT = PbDTWR + PbDTWG + PbDTWB
-MxT = MDTWR + MDTWG + MDTWB
-CoT = CDTWR + CDTWG + CDTWB
-WoT = WDTWR + WDTWG + WDTWB
-DoT = DDTWR + DDTWG + DDTWB
-NoT = NDTWR + NDTWG + NDTWB
-LoT = LDTWR + LDTWG + LDTWB
-SoT = SDTWR + SDTWG + SDTWB
-AoT = ADTWR + ADTWG + ADTWB
-
-
-CuTr = CuDTWR./CuT
-ZnTr = ZnDTWR./ZnT
-PbTr = PbDTWR./PbT
-MxTr = MDTWR./MxT
-CoTr = CDTWR./CoT
-WoTr = WDTWR./WoT
-DoTr = DDTWR./DoT
-NoTr = NDTWR./NoT
-LoTr = LDTWR./LoT
-SoTr = SDTWR./SoT
-AoTr = ADTWR./AoT
-
-CuTg = CuDTWG./CuT
-ZnTg = ZnDTWG./ZnT
-PbTg = PbDTWG./PbT
-MxTg = MDTWG./MxT
-CoTg = CDTWG./CoT
-WoTg = WDTWG./WoT
-DoTg = DDTWG./DoT
-NoTg = NDTWG./NoT
-LoTg = LDTWG./LoT
-SoTg = SDTWG./SoT
-AoTg = ADTWG./AoT
-
-CuTb = CuDTWB./CuT
-ZnTb = ZnDTWB./ZnT
-PbTb = PbDTWB./PbT
-MxTb = MDTWB./MxT
-CoTb = CDTWB./CoT
-WoTb = WDTWB./WoT
-DoTb = DDTWB./DoT
-NoTb = NDTWB./NoT
-LoTb = LDTWB./LoT
-SoTb = SDTWB./SoT
-AoTb = ADTWB./AoT
-
-
-
-T1 = [CuDTWR(1,:) CuDTWG(1,:) CuDTWB(1,:); CuDTWR(2,:) CuDTWG(2,:) CuDTWB(2,:); CuDTWR(3,:) CuDTWG(3,:) CuDTWB(3,:); CuDTWR(4,:) CuDTWG(4,:) CuDTWB(4,:); CuDTWR(5,:) CuDTWG(5,:) CuDTWB(5,:); CuDTWR(6,:) CuDTWG(6,:) CuDTWB(6,:);CuDTWR(7,:) CuDTWG(7,:) CuDTWB(7,:); CuDTWR(8,:) CuDTWG(8,:) CuDTWB(8,:)];
-T2 = [ZnDTWR(1,:) ZnDTWG(1,:) ZnDTWB(1,:); ZnDTWR(2,:) ZnDTWG(2,:) ZnDTWB(2,:); ZnDTWR(3,:) ZnDTWG(3,:) ZnDTWB(3,:); ZnDTWR(4,:) ZnDTWG(4,:) ZnDTWB(4,:); ZnDTWR(5,:) ZnDTWG(5,:) ZnDTWB(5,:); ZnDTWR(6,:) ZnDTWG(6,:) ZnDTWB(6,:);ZnDTWR(7,:) ZnDTWG(7,:) ZnDTWB(7,:); ZnDTWR(8,:) ZnDTWG(8,:) ZnDTWB(8,:)];
-T3 = [PbDTWR(1,:) PbDTWG(1,:) PbDTWB(1,:); PbDTWR(2,:) PbDTWG(2,:) PbDTWB(2,:); PbDTWR(3,:) PbDTWG(3,:) PbDTWB(3,:); PbDTWR(4,:) PbDTWG(4,:) PbDTWB(4,:); PbDTWR(5,:) PbDTWG(5,:) PbDTWB(5,:); PbDTWR(6,:) PbDTWG(6,:) PbDTWB(6,:);PbDTWR(7,:) PbDTWG(7,:) PbDTWB(7,:); PbDTWR(8,:) PbDTWG(8,:) PbDTWB(8,:)];
-T4 = [MDTWR(1,:) MDTWG(1,:) MDTWB(1,:); MDTWR(2,:) MDTWG(2,:) MDTWB(2,:); MDTWR(3,:) MDTWG(3,:) MDTWB(3,:); MDTWR(4,:) MDTWG(4,:) MDTWB(4,:); MDTWR(5,:) MDTWG(5,:) MDTWB(5,:); MDTWR(6,:) MDTWG(6,:) MDTWB(6,:);MDTWR(7,:) MDTWG(7,:) MDTWB(7,:); MDTWR(8,:) MDTWG(8,:) MDTWB(8,:)];
-T5 = [CDTWR(1,:) CDTWG(1,:) CDTWB(1,:); CDTWR(2,:) CDTWG(2,:) CDTWB(2,:); CDTWR(3,:) CDTWG(3,:) CDTWB(3,:); CDTWR(4,:) CDTWG(4,:) CDTWB(4,:); CDTWR(5,:) CDTWG(5,:) CDTWB(5,:); CDTWR(6,:) CDTWG(6,:) CDTWB(6,:);CDTWR(7,:) CDTWG(7,:) CDTWB(7,:); CDTWR(8,:) CDTWG(8,:) CDTWB(8,:)];
-T6 = [WDTWR(1,:) WDTWG(1,:) WDTWB(1,:); WDTWR(2,:) WDTWG(2,:) WDTWB(2,:); WDTWR(3,:) WDTWG(3,:) WDTWB(3,:); WDTWR(4,:) WDTWG(4,:) WDTWB(4,:); WDTWR(5,:) WDTWG(5,:) WDTWB(5,:); WDTWR(6,:) WDTWG(6,:) WDTWB(6,:); WDTWR(7,:) WDTWG(7,:) WDTWB(7,:); WDTWR(8,:) WDTWG(8,:) WDTWB(8,:)];
-T7 = [DDTWR(1,:) DDTWG(1,:) DDTWB(1,:); DDTWR(2,:) DDTWG(2,:) DDTWB(2,:); DDTWR(3,:) DDTWG(3,:) DDTWB(3,:); DDTWR(4,:) DDTWG(4,:) DDTWB(4,:); DDTWR(5,:) DDTWG(5,:) DDTWB(5,:); DDTWR(6,:) DDTWG(6,:) DDTWB(6,:); DDTWR(7,:) DDTWG(7,:) DDTWB(7,:); DDTWR(8,:) DDTWG(8,:) DDTWB(8,:)];
-T8 = [NDTWR(1,:) NDTWG(1,:) NDTWB(1,:); NDTWR(2,:) NDTWG(2,:) NDTWB(2,:); NDTWR(3,:) NDTWG(3,:) NDTWB(3,:); NDTWR(4,:) NDTWG(4,:) NDTWB(4,:); NDTWR(5,:) NDTWG(5,:) NDTWB(5,:); NDTWR(6,:) NDTWG(6,:) NDTWB(6,:); NDTWR(7,:) NDTWG(7,:) NDTWB(7,:); NDTWR(8,:) NDTWG(8,:) NDTWB(8,:)];
-T9 = [LDTWR(1,:) LDTWG(1,:) LDTWB(1,:); LDTWR(2,:) LDTWG(2,:) LDTWB(2,:); LDTWR(3,:) LDTWG(3,:) LDTWB(3,:); LDTWR(4,:) LDTWG(4,:) LDTWB(4,:); LDTWR(5,:) LDTWG(5,:) LDTWB(5,:); LDTWR(6,:) LDTWG(6,:) LDTWB(6,:); LDTWR(7,:) LDTWG(7,:) LDTWB(7,:); LDTWR(8,:) LDTWG(8,:) LDTWB(8,:)];
-T10 = [SDTWR(1,:) SDTWG(1,:) SDTWB(1,:); SDTWR(2,:) SDTWG(2,:) SDTWB(2,:); SDTWR(3,:) SDTWG(3,:) SDTWB(3,:); SDTWR(4,:) SDTWG(4,:) SDTWB(4,:); SDTWR(5,:) SDTWG(5,:) SDTWB(5,:); SDTWR(6,:) SDTWG(6,:) SDTWB(6,:); SDTWR(7,:) SDTWG(7,:) SDTWB(7,:); SDTWR(8,:) SDTWG(8,:) SDTWB(8,:)];
-T11 = [ADTWR(1,:) ADTWG(1,:) ADTWB(1,:); ADTWR(2,:) ADTWG(2,:) ADTWB(2,:); ADTWR(3,:) ADTWG(3,:) ADTWB(3,:); ADTWR(4,:) ADTWG(4,:) ADTWB(4,:); ADTWR(5,:) ADTWG(5,:) ADTWB(5,:); ADTWR(6,:) ADTWG(6,:) ADTWB(6,:); ADTWR(7,:) ADTWG(7,:) ADTWB(7,:); ADTWR(8,:) ADTWG(8,:) ADTWB(8,:)];
-
-tiledlayout(6,2)
-% Top bar graph
-ax1 = nexttile;
-b1 = bar(ax1,T1)
-b1(1).FaceColor = [0.6350 0.0780 0.1840];
-b1(2).FaceColor = [0.4660 0.6740 0.1880];
-b1(3).FaceColor = [[0 0.4470 0.7410]];
-ylabel('Copper');
-axis([0 9 0 0.5])
-ax2 = nexttile;
-b2 = bar(ax2,T2)
-b2(1).FaceColor = [0.6350 0.0780 0.1840];
-b2(2).FaceColor = [0.4660 0.6740 0.1880];
-b2(3).FaceColor = [[0 0.4470 0.7410]];
-ylabel('Zinc');
-axis([0 9 0 0.5])
-ax3 = nexttile;
-b3 = bar(ax3,T3)
-b3(1).FaceColor = [0.6350 0.0780 0.1840];
-b3(2).FaceColor = [0.4660 0.6740 0.1880];
-b3(3).FaceColor = [[0 0.4470 0.7410]];
-ylabel('Lead');
-axis([0 9 0 0.5])
-ax4 = nexttile;
-b4 = bar(ax4,T4)
-b4(1).FaceColor = [0.6350 0.0780 0.1840];
-b4(2).FaceColor = [0.4660 0.6740 0.1880];
-b4(3).FaceColor = [[0 0.4470 0.7410]];
-ylabel('Mix');
-axis([0 9 0 0.5])
-ax5 = nexttile;
-b5 = bar(ax5,T5)
-b5(1).FaceColor = [0.6350 0.0780 0.1840];
-b5(2).FaceColor = [0.4660 0.6740 0.1880];
-b5(3).FaceColor = [[0 0.4470 0.7410]];
-ylabel('Cont.');
-axis([0 9 0 0.5])
-ax6 = nexttile;
-b6 = bar(ax6,T6)
-b6(1).FaceColor = [0.6350 0.0780 0.1840];
-b6(2).FaceColor = [0.4660 0.6740 0.1880];
-b6(3).FaceColor = [[0 0.4470 0.7410]];
-ylabel('Wet');
-axis([0 9 0 0.5])
-ax7 = nexttile;
-b7 = bar(ax7,T7)
-b7(1).FaceColor = [0.6350 0.0780 0.1840];
-b7(2).FaceColor = [0.4660 0.6740 0.1880];
-b7(3).FaceColor = [[0 0.4470 0.7410]];
-ylabel('Dry');
-axis([0 9 0 0.5])
-ax8 = nexttile;
-b8 = bar(ax8,T8)
-b8(1).FaceColor = [0.6350 0.0780 0.1840];
-b8(2).FaceColor = [0.4660 0.6740 0.1880];
-b8(3).FaceColor = [[0 0.4470 0.7410]];
-ylabel('Nuts.');
-axis([0 9 0 0.5])
-ax9 = nexttile;
-b9 = bar(ax9,T9)
-b9(1).FaceColor = [0.6350 0.0780 0.1840];
-b9(2).FaceColor = [0.4660 0.6740 0.1880];
-b9(3).FaceColor = [[0 0.4470 0.7410]];
-ylabel('Long');
-axis([0 9 0 0.5])
-ax10 = nexttile;
-b10 = bar(ax10,T10)
-b10(1).FaceColor = [0.6350 0.0780 0.1840];
-b10(2).FaceColor = [0.4660 0.6740 0.1880];
-b10(3).FaceColor = [[0 0.4470 0.7410]];
-ylabel('Short');
-axis([0 9 0 0.5])
-ax11 = nexttile;
-b11 = bar(ax11,T11)
-b11(1).FaceColor = [0.6350 0.0780 0.1840];
-b11(2).FaceColor = [0.4660 0.6740 0.1880];
-b11(3).FaceColor = [[0 0.4470 0.7410]];
-ylabel('Dark');
-axis([0 9 0 0.5])

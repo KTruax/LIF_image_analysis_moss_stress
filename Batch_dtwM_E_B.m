@@ -1,8 +1,8 @@
 %DTW versus
 %This code is for just running the dtw comparisons for single color
 
-MasterC = 'E:\Batch\5B\Control';
-%MasterC = 'E:\Batch\5B\Cont'; %not appreciably better....
+MasterC = 'E:\Batch\10B\Control';
+%MasterC = 'E:\Batch\10B\Cont'; %not appreciably better....
 MasterCS = imageDatastore(MasterC);
 
 MCR = batchR(MasterCS); %194 control maintained instead of 1 master
@@ -18,14 +18,14 @@ MCGB = [MCG;MCB];
 %DTW2 = dtw2(MCR,Cu0R(:,1),(MCR-Cu0R(:,1)));
 
 %copper trial 1
-CuC = 'E:\Batch\5B\T1Cu\0';
-Cu1 = 'E:\Batch\5B\T1Cu\1';
-Cu2 = 'E:\Batch\5B\T1Cu\2';
-Cu3 = 'E:\Batch\5B\T1Cu\3';
-Cu4 = 'E:\Batch\5B\T1Cu\4';
-Cu5 = 'E:\Batch\5B\T1Cu\5';
-Cu6 = 'E:\Batch\5B\T1Cu\6';
-Cu7 = 'E:\Batch\5B\T1Cu\7';
+CuC = 'E:\Batch\10B\T1Cu\0';
+Cu1 = 'E:\Batch\10B\T1Cu\1';
+Cu2 = 'E:\Batch\10B\T1Cu\2';
+Cu3 = 'E:\Batch\10B\T1Cu\3';
+Cu4 = 'E:\Batch\10B\T1Cu\4';
+Cu5 = 'E:\Batch\10B\T1Cu\5';
+Cu6 = 'E:\Batch\10B\T1Cu\6';
+Cu7 = 'E:\Batch\10B\T1Cu\7';
 CuCS = imageDatastore(CuC);
 Cu1S = imageDatastore(Cu1);
 Cu2S = imageDatastore(Cu2);
@@ -49,7 +49,7 @@ Cu1G = batchG(Cu1S);
 Cu2G = batchG(Cu2S);
 Cu3G = batchG(Cu3S);
 Cu4G = batchG(Cu4S);
-Cu5B = batchG(Cu5S);
+Cu10B = batchG(Cu5S);
 Cu6G = batchG(Cu6S);
 Cu7G = batchG(Cu7S);
 
@@ -58,7 +58,7 @@ Cu1B = batchB(Cu1S);
 Cu2B = batchB(Cu2S);
 Cu3B = batchB(Cu3S);
 Cu4B = batchB(Cu4S);
-Cu5B = batchB(Cu5S);
+Cu10B = batchB(Cu5S);
 Cu6B = batchB(Cu6S);
 Cu7B = batchB(Cu7S);
 
@@ -67,7 +67,7 @@ CuRG1 = [Cu1R;Cu1G];
 CuRG2 = [Cu2R;Cu2G];
 CuRG3 = [Cu3R;Cu3G];
 CuRG4 = [Cu4R;Cu4G];
-CuRG5 = [Cu5R;Cu5B];
+CuRG5 = [Cu5R;Cu10B];
 CuRG6 = [Cu6R;Cu6G];
 CuRG7 = [Cu7R;Cu7G];
 
@@ -76,7 +76,7 @@ CuRB1 = [Cu1R;Cu1B];
 CuRB2 = [Cu2R;Cu2B];
 CuRB3 = [Cu3R;Cu3B];
 CuRB4 = [Cu4R;Cu4B];
-CuRB5 = [Cu5R;Cu5B];
+CuRB5 = [Cu5R;Cu10B];
 CuRB6 = [Cu6R;Cu6B];
 CuRB7 = [Cu7R;Cu7B];
 
@@ -85,7 +85,7 @@ CuGB1 = [Cu1G;Cu1B];
 CuGB2 = [Cu2G;Cu2B];
 CuGB3 = [Cu3G;Cu3B];
 CuGB4 = [Cu4G;Cu4B];
-CuGB5 = [Cu5B;Cu5B];
+CuGB5 = [Cu10B;Cu10B];
 CuGB6 = [Cu6G;Cu6B];
 CuGB7 = [Cu7G;Cu7B];
 
@@ -112,13 +112,13 @@ CuDTW1GB = one(MCGB,CuGB1);
 CuDTW2GB = one(MCGB,CuGB2);
 CuDTW3GB = one(MCGB,CuGB3);
 CuDTW4GB = one(MCGB,CuGB4);
-CuDTW5BB = one(MCGB,CuGB5);
+CuDTW10BB = one(MCGB,CuGB5);
 CuDTW6GB = one(MCGB,CuGB6);
 CuDTW7GB = one(MCGB,CuGB7);
 
 CuDTWRG = [CuDTW0RG(:,1); CuDTW1RG(:,1); CuDTW2RG(:,1); CuDTW3RG(:,1); CuDTW4RG(:,1); CuDTW5RG(:,1); CuDTW6RG(:,1); CuDTW7RG(:,1)];
 Cuone = [CuDTW0RB(:,1); CuDTW1RB(:,1); CuDTW2RB(:,1); CuDTW3RB(:,1); CuDTW4RB(:,1); CuDTW5RB(:,1); CuDTW6RB(:,1); CuDTW7RB(:,1)];
-CuDTWGB = [CuDTW0GB(:,1); CuDTW1GB(:,1); CuDTW2GB(:,1); CuDTW3GB(:,1); CuDTW4GB(:,1); CuDTW5BB(:,1); CuDTW6GB(:,1); CuDTW7GB(:,1)];
+CuDTWGB = [CuDTW0GB(:,1); CuDTW1GB(:,1); CuDTW2GB(:,1); CuDTW3GB(:,1); CuDTW4GB(:,1); CuDTW10BB(:,1); CuDTW6GB(:,1); CuDTW7GB(:,1)];
 
 %x = (0:7);
 %figure;
@@ -129,14 +129,14 @@ CuDTWGB = [CuDTW0GB(:,1); CuDTW1GB(:,1); CuDTW2GB(:,1); CuDTW3GB(:,1); CuDTW4GB(
 %legend('CuRG','CuRB','CuGB');
 
 %zinc trial 2
-ZnC = 'E:\Batch\5B\T2Zn\0';
-Zn1 = 'E:\Batch\5B\T2Zn\1';
-Zn2 = 'E:\Batch\5B\T2Zn\2';
-Zn3 = 'E:\Batch\5B\T2Zn\3';
-Zn4 = 'E:\Batch\5B\T2Zn\4';
-Zn5 = 'E:\Batch\5B\T2Zn\5';
-Zn6 = 'E:\Batch\5B\T2Zn\6';
-Zn7 = 'E:\Batch\5B\T2Zn\7';
+ZnC = 'E:\Batch\10B\T2Zn\0';
+Zn1 = 'E:\Batch\10B\T2Zn\1';
+Zn2 = 'E:\Batch\10B\T2Zn\2';
+Zn3 = 'E:\Batch\10B\T2Zn\3';
+Zn4 = 'E:\Batch\10B\T2Zn\4';
+Zn5 = 'E:\Batch\10B\T2Zn\5';
+Zn6 = 'E:\Batch\10B\T2Zn\6';
+Zn7 = 'E:\Batch\10B\T2Zn\7';
 ZnCS = imageDatastore(ZnC);
 Zn1S = imageDatastore(Zn1);
 Zn2S = imageDatastore(Zn2);
@@ -160,7 +160,7 @@ Zn1G = batchG(Zn1S);
 Zn2G = batchG(Zn2S);
 Zn3G = batchG(Zn3S);
 Zn4G = batchG(Zn4S);
-Zn5B = batchG(Zn5S);
+Zn10B = batchG(Zn5S);
 Zn6G = batchG(Zn6S);
 Zn7G = batchG(Zn7S);
 
@@ -169,7 +169,7 @@ Zn1B = batchB(Zn1S);
 Zn2B = batchB(Zn2S);
 Zn3B = batchB(Zn3S);
 Zn4B = batchB(Zn4S);
-Zn5B = batchB(Zn5S);
+Zn10B = batchB(Zn5S);
 Zn6B = batchB(Zn6S);
 Zn7B = batchB(Zn7S);
 
@@ -178,7 +178,7 @@ ZnRG1 = [Zn1R;Zn1G];
 ZnRG2 = [Zn2R;Zn2G];
 ZnRG3 = [Zn3R;Zn3G];
 ZnRG4 = [Zn4R;Zn4G];
-ZnRG5 = [Zn5R;Zn5B];
+ZnRG5 = [Zn5R;Zn10B];
 ZnRG6 = [Zn6R;Zn6G];
 ZnRG7 = [Zn7R;Zn7G];
 
@@ -187,7 +187,7 @@ ZnRB1 = [Zn1R;Zn1B];
 ZnRB2 = [Zn2R;Zn2B];
 ZnRB3 = [Zn3R;Zn3B];
 ZnRB4 = [Zn4R;Zn4B];
-ZnRB5 = [Zn5R;Zn5B];
+ZnRB5 = [Zn5R;Zn10B];
 ZnRB6 = [Zn6R;Zn6B];
 ZnRB7 = [Zn7R;Zn7B];
 
@@ -196,7 +196,7 @@ ZnGB1 = [Zn1G;Zn1B];
 ZnGB2 = [Zn2G;Zn2B];
 ZnGB3 = [Zn3G;Zn3B];
 ZnGB4 = [Zn4G;Zn4B];
-ZnGB5 = [Zn5B;Zn5B];
+ZnGB5 = [Zn10B;Zn10B];
 ZnGB6 = [Zn6G;Zn6B];
 ZnGB7 = [Zn7G;Zn7B];
 
@@ -223,23 +223,23 @@ ZnDTW1GB = one(MCGB,ZnGB1);
 ZnDTW2GB = one(MCGB,ZnGB2);
 ZnDTW3GB = one(MCGB,ZnGB3);
 ZnDTW4GB = one(MCGB,ZnGB4);
-ZnDTW5BB = one(MCGB,ZnGB5);
+ZnDTW10BB = one(MCGB,ZnGB5);
 ZnDTW6GB = one(MCGB,ZnGB6);
 ZnDTW7GB = one(MCGB,ZnGB7);
 
-ZnDTWGB = [ZnDTW0GB(:,1); ZnDTW1GB(:,1); ZnDTW2GB(:,1); ZnDTW3GB(:,1); ZnDTW4GB(:,1); ZnDTW5BB(:,1); ZnDTW6GB(:,1); ZnDTW7GB(:,1)];
+ZnDTWGB = [ZnDTW0GB(:,1); ZnDTW1GB(:,1); ZnDTW2GB(:,1); ZnDTW3GB(:,1); ZnDTW4GB(:,1); ZnDTW10BB(:,1); ZnDTW6GB(:,1); ZnDTW7GB(:,1)];
 ZnDTWRG = [ZnDTW0RG(:,1); ZnDTW1RG(:,1); ZnDTW2RG(:,1); ZnDTW3RG(:,1); ZnDTW4RG(:,1); ZnDTW5RG(:,1); ZnDTW6RG(:,1); ZnDTW7RG(:,1)];
 Znone = [ZnDTW0RB(:,1); ZnDTW1RB(:,1); ZnDTW2RB(:,1); ZnDTW3RB(:,1); ZnDTW4RB(:,1); ZnDTW5RB(:,1); ZnDTW6RB(:,1); ZnDTW7RB(:,1)];
 
 %lead trial 3
-PbC = 'E:\Batch\5B\T3Pb\0';
-Pb1 = 'E:\Batch\5B\T3Pb\1';
-Pb2 = 'E:\Batch\5B\T3Pb\2';
-Pb3 = 'E:\Batch\5B\T3Pb\3';
-Pb4 = 'E:\Batch\5B\T3Pb\4';
-Pb5 = 'E:\Batch\5B\T3Pb\5';
-Pb6 = 'E:\Batch\5B\T3Pb\6';
-Pb7 = 'E:\Batch\5B\T3Pb\7';
+PbC = 'E:\Batch\10B\T3Pb\0';
+Pb1 = 'E:\Batch\10B\T3Pb\1';
+Pb2 = 'E:\Batch\10B\T3Pb\2';
+Pb3 = 'E:\Batch\10B\T3Pb\3';
+Pb4 = 'E:\Batch\10B\T3Pb\4';
+Pb5 = 'E:\Batch\10B\T3Pb\5';
+Pb6 = 'E:\Batch\10B\T3Pb\6';
+Pb7 = 'E:\Batch\10B\T3Pb\7';
 PbCS = imageDatastore(PbC);
 Pb1S = imageDatastore(Pb1);
 Pb2S = imageDatastore(Pb2);
@@ -262,7 +262,7 @@ Pb1G = batchG(Pb1S);
 Pb2G = batchG(Pb2S);
 Pb3G = batchG(Pb3S);
 Pb4G = batchG(Pb4S);
-Pb5B = batchG(Pb5S);
+Pb10B = batchG(Pb5S);
 Pb6G = batchG(Pb6S);
 Pb7G = batchG(Pb7S);
 
@@ -271,7 +271,7 @@ Pb1B = batchB(Pb1S);
 Pb2B = batchB(Pb2S);
 Pb3B = batchB(Pb3S);
 Pb4B = batchB(Pb4S);
-Pb5B = batchB(Pb5S);
+Pb10B = batchB(Pb5S);
 Pb6B = batchB(Pb6S);
 Pb7B = batchB(Pb7S);
 
@@ -280,7 +280,7 @@ PbRG1 = [Pb1R;Pb1G];
 PbRG2 = [Pb2R;Pb2G];
 PbRG3 = [Pb3R;Pb3G];
 PbRG4 = [Pb4R;Pb4G];
-PbRG5 = [Pb5R;Pb5B];
+PbRG5 = [Pb5R;Pb10B];
 PbRG6 = [Pb6R;Pb6G];
 PbRG7 = [Pb7R;Pb7G];
 
@@ -289,7 +289,7 @@ PbRB1 = [Pb1R;Pb1B];
 PbRB2 = [Pb2R;Pb2B];
 PbRB3 = [Pb3R;Pb3B];
 PbRB4 = [Pb4R;Pb4B];
-PbRB5 = [Pb5R;Pb5B];
+PbRB5 = [Pb5R;Pb10B];
 PbRB6 = [Pb6R;Pb6B];
 PbRB7 = [Pb7R;Pb7B];
 
@@ -298,7 +298,7 @@ PbGB1 = [Pb1G;Pb1B];
 PbGB2 = [Pb2G;Pb2B];
 PbGB3 = [Pb3G;Pb3B];
 PbGB4 = [Pb4G;Pb4B];
-PbGB5 = [Pb5B;Pb5B];
+PbGB5 = [Pb10B;Pb10B];
 PbGB6 = [Pb6G;Pb6B];
 PbGB7 = [Pb7G;Pb7B];
 
@@ -325,23 +325,23 @@ PbDTW1GB = one(MCGB,PbGB1);
 PbDTW2GB = one(MCGB,PbGB2);
 PbDTW3GB = one(MCGB,PbGB3);
 PbDTW4GB = one(MCGB,PbGB4);
-PbDTW5BB = one(MCGB,PbGB5);
+PbDTW10BB = one(MCGB,PbGB5);
 PbDTW6GB = one(MCGB,PbGB6);
 PbDTW7GB = one(MCGB,PbGB7);
 
-PbDTWGB = [PbDTW0GB(:,1); PbDTW1GB(:,1); PbDTW2GB(:,1); PbDTW3GB(:,1); PbDTW4GB(:,1); PbDTW5BB(:,1); PbDTW6GB(:,1); PbDTW7GB(:,1)];
+PbDTWGB = [PbDTW0GB(:,1); PbDTW1GB(:,1); PbDTW2GB(:,1); PbDTW3GB(:,1); PbDTW4GB(:,1); PbDTW10BB(:,1); PbDTW6GB(:,1); PbDTW7GB(:,1)];
 PbDTWRG = [PbDTW0RG(:,1); PbDTW1RG(:,1); PbDTW2RG(:,1); PbDTW3RG(:,1); PbDTW4RG(:,1); PbDTW5RG(:,1); PbDTW6RG(:,1); PbDTW7RG(:,1)];
 Pbone = [PbDTW0RB(:,1); PbDTW1RB(:,1); PbDTW2RB(:,1); PbDTW3RB(:,1); PbDTW4RB(:,1); PbDTW5RB(:,1); PbDTW6RB(:,1); PbDTW7RB(:,1)];
 
 %Mix - Trial 4
-MC = 'E:\Batch\5B\T4Mix\0';
-M1 = 'E:\Batch\5B\T4Mix\1';
-M2 = 'E:\Batch\5B\T4Mix\2';
-M3 = 'E:\Batch\5B\T4Mix\3';
-M4 = 'E:\Batch\5B\T4Mix\4';
-M5 = 'E:\Batch\5B\T4Mix\5';
-M6 = 'E:\Batch\5B\T4Mix\6';
-M7 = 'E:\Batch\5B\T4Mix\7';
+MC = 'E:\Batch\10B\T4Mix\0';
+M1 = 'E:\Batch\10B\T4Mix\1';
+M2 = 'E:\Batch\10B\T4Mix\2';
+M3 = 'E:\Batch\10B\T4Mix\3';
+M4 = 'E:\Batch\10B\T4Mix\4';
+M5 = 'E:\Batch\10B\T4Mix\5';
+M6 = 'E:\Batch\10B\T4Mix\6';
+M7 = 'E:\Batch\10B\T4Mix\7';
 MCS = imageDatastore(MC);
 M1S = imageDatastore(M1);
 M2S = imageDatastore(M2);
@@ -364,7 +364,7 @@ M1G = batchG(M1S);
 M2G = batchG(M2S);
 M3G = batchG(M3S);
 M4G = batchG(M4S);
-M5B = batchG(M5S);
+M10B = batchG(M5S);
 M6G = batchG(M6S);
 M7G = batchG(M7S);
 
@@ -373,7 +373,7 @@ M1B = batchB(M1S);
 M2B = batchB(M2S);
 M3B = batchB(M3S);
 M4B = batchB(M4S);
-M5B = batchB(M5S);
+M10B = batchB(M5S);
 M6B = batchB(M6S);
 M7B = batchB(M7S);
 
@@ -382,7 +382,7 @@ MRG1 = [M1R;M1G];
 MRG2 = [M2R;M2G];
 MRG3 = [M3R;M3G];
 MRG4 = [M4R;M4G];
-MRG5 = [M5R;M5B];
+MRG5 = [M5R;M10B];
 MRG6 = [M6R;M6G];
 MRG7 = [M7R;M7G];
 
@@ -391,7 +391,7 @@ MRB1 = [M1R;M1B];
 MRB2 = [M2R;M2B];
 MRB3 = [M3R;M3B];
 MRB4 = [M4R;M4B];
-MRB5 = [M5R;M5B];
+MRB5 = [M5R;M10B];
 MRB6 = [M6R;M6B];
 MRB7 = [M7R;M7B];
 
@@ -400,7 +400,7 @@ MGB1 = [M1G;M1B];
 MGB2 = [M2G;M2B];
 MGB3 = [M3G;M3B];
 MGB4 = [M4G;M4B];
-MGB5 = [M5B;M5B];
+MGB5 = [M10B;M10B];
 MGB6 = [M6G;M6B];
 MGB7 = [M7G;M7B];
 
@@ -427,23 +427,23 @@ MDTW1GB = one(MCGB,MGB1);
 MDTW2GB = one(MCGB,MGB2);
 MDTW3GB = one(MCGB,MGB3);
 MDTW4GB = one(MCGB,MGB4);
-MDTW5BB = one(MCGB,MGB5);
+MDTW10BB = one(MCGB,MGB5);
 MDTW6GB = one(MCGB,MGB6);
 MDTW7GB = one(MCGB,MGB7);
 
-MDTWGB = [MDTW0GB(:,1); MDTW1GB(:,1); MDTW2GB(:,1); MDTW3GB(:,1); MDTW4GB(:,1); MDTW5BB(:,1); MDTW6GB(:,1); MDTW7GB(:,1)];
+MDTWGB = [MDTW0GB(:,1); MDTW1GB(:,1); MDTW2GB(:,1); MDTW3GB(:,1); MDTW4GB(:,1); MDTW10BB(:,1); MDTW6GB(:,1); MDTW7GB(:,1)];
 MDTWRG = [MDTW0RG(:,1); MDTW1RG(:,1); MDTW2RG(:,1); MDTW3RG(:,1); MDTW4RG(:,1); MDTW5RG(:,1); MDTW6RG(:,1); MDTW7RG(:,1)];
 Mone = [MDTW0RB(:,1); MDTW1RB(:,1); MDTW2RB(:,1); MDTW3RB(:,1); MDTW4RB(:,1); MDTW5RB(:,1); MDTW6RB(:,1); MDTW7RB(:,1)];
 
 %Control for comparison
-CC = 'E:\Batch\5B\T5Con\0';
-C1 = 'E:\Batch\5B\T5Con\1';
-C2 = 'E:\Batch\5B\T5Con\2';
-C3 = 'E:\Batch\5B\T5Con\3';
-C4 = 'E:\Batch\5B\T5Con\4';
-C5 = 'E:\Batch\5B\T5Con\5';
-C6 = 'E:\Batch\5B\T5Con\6';
-C7 = 'E:\Batch\5B\T5Con\7';
+CC = 'E:\Batch\10B\T5Con\0';
+C1 = 'E:\Batch\10B\T5Con\1';
+C2 = 'E:\Batch\10B\T5Con\2';
+C3 = 'E:\Batch\10B\T5Con\3';
+C4 = 'E:\Batch\10B\T5Con\4';
+C5 = 'E:\Batch\10B\T5Con\5';
+C6 = 'E:\Batch\10B\T5Con\6';
+C7 = 'E:\Batch\10B\T5Con\7';
 CCS = imageDatastore(CC);
 C1S = imageDatastore(C1);
 C2S = imageDatastore(C2);
@@ -466,7 +466,7 @@ C1G = batchG(C1S);
 C2G = batchG(C2S);
 C3G = batchG(C3S);
 C4G = batchG(C4S);
-C5B = batchG(C5S);
+C10B = batchG(C5S);
 C6G = batchG(C6S);
 C7G = batchG(C7S);
 
@@ -475,7 +475,7 @@ C1B = batchB(C1S);
 C2B = batchB(C2S);
 C3B = batchB(C3S);
 C4B = batchB(C4S);
-C5B = batchB(C5S);
+C10B = batchB(C5S);
 C6B = batchB(C6S);
 C7B = batchB(C7S);
 
@@ -484,7 +484,7 @@ CRG1 = [C1R;C1G];
 CRG2 = [C2R;C2G];
 CRG3 = [C3R;C3G];
 CRG4 = [C4R;C4G];
-CRG5 = [C5R;C5B];
+CRG5 = [C5R;C10B];
 CRG6 = [C6R;C6G];
 CRG7 = [C7R;C7G];
 
@@ -493,7 +493,7 @@ CRB1 = [C1R;C1B];
 CRB2 = [C2R;C2B];
 CRB3 = [C3R;C3B];
 CRB4 = [C4R;C4B];
-CRB5 = [C5R;C5B];
+CRB5 = [C5R;C10B];
 CRB6 = [C6R;C6B];
 CRB7 = [C7R;C7B];
 
@@ -502,7 +502,7 @@ CGB1 = [C1G;C1B];
 CGB2 = [C2G;C2B];
 CGB3 = [C3G;C3B];
 CGB4 = [C4G;C4B];
-CGB5 = [C5B;C5B];
+CGB5 = [C10B;C10B];
 CGB6 = [C6G;C6B];
 CGB7 = [C7G;C7B];
 
@@ -529,11 +529,11 @@ CDTW1GB = one(MCGB,CGB1);
 CDTW2GB = one(MCGB,CGB2);
 CDTW3GB = one(MCGB,CGB3);
 CDTW4GB = one(MCGB,CGB4);
-CDTW5BB = one(MCGB,CGB5);
+CDTW10BB = one(MCGB,CGB5);
 CDTW6GB = one(MCGB,CGB6);
 CDTW7GB = one(MCGB,CGB7);
 
-CDTWGB = [CDTW0GB(:,1); CDTW1GB(:,1); CDTW2GB(:,1); CDTW3GB(:,1); CDTW4GB(:,1); CDTW5BB(:,1); CDTW6GB(:,1); CDTW7GB(:,1)];
+CDTWGB = [CDTW0GB(:,1); CDTW1GB(:,1); CDTW2GB(:,1); CDTW3GB(:,1); CDTW4GB(:,1); CDTW10BB(:,1); CDTW6GB(:,1); CDTW7GB(:,1)];
 
 ContMb = sum(CDTWGB)/8
 Contvarb = sum((CDTWGB - ContMb).^2)./(7);
@@ -558,14 +558,14 @@ Contstd2 = ContM + (2.*Contstd')
 Contstd3 = ContM + (3.*Contstd')
 
 %Wet - Trial 6
-WC = 'E:\Batch\5B\T6Wet\0';
-W1 = 'E:\Batch\5B\T6Wet\1';
-W2 = 'E:\Batch\5B\T6Wet\2';
-W3 = 'E:\Batch\5B\T6Wet\3';
-W4 = 'E:\Batch\5B\T6Wet\4';
-W5 = 'E:\Batch\5B\T6Wet\5';
-W6 = 'E:\Batch\5B\T6Wet\6';
-W7 = 'E:\Batch\5B\T6Wet\7';
+WC = 'E:\Batch\10B\T6Wet\0';
+W1 = 'E:\Batch\10B\T6Wet\1';
+W2 = 'E:\Batch\10B\T6Wet\2';
+W3 = 'E:\Batch\10B\T6Wet\3';
+W4 = 'E:\Batch\10B\T6Wet\4';
+W5 = 'E:\Batch\10B\T6Wet\5';
+W6 = 'E:\Batch\10B\T6Wet\6';
+W7 = 'E:\Batch\10B\T6Wet\7';
 WCS = imageDatastore(WC);
 W1S = imageDatastore(W1);
 W2S = imageDatastore(W2);
@@ -588,7 +588,7 @@ W1G = batchG(W1S);
 W2G = batchG(W2S);
 W3G = batchG(W3S);
 W4G = batchG(W4S);
-W5B = batchG(W5S);
+W10B = batchG(W5S);
 W6G = batchG(W6S);
 W7G = batchG(W7S);
 
@@ -597,7 +597,7 @@ W1B = batchB(W1S);
 W2B = batchB(W2S);
 W3B = batchB(W3S);
 W4B = batchB(W4S);
-W5B = batchB(W5S);
+W10B = batchB(W5S);
 W6B = batchB(W6S);
 W7B = batchB(W7S);
 
@@ -606,7 +606,7 @@ WRG1 = [W1R;W1G];
 WRG2 = [W2R;W2G];
 WRG3 = [W3R;W3G];
 WRG4 = [W4R;W4G];
-WRG5 = [W5R;W5B];
+WRG5 = [W5R;W10B];
 WRG6 = [W6R;W6G];
 WRG7 = [W7R;W7G];
 
@@ -615,7 +615,7 @@ WRB1 = [W1R;W1B];
 WRB2 = [W2R;W2B];
 WRB3 = [W3R;W3B];
 WRB4 = [W4R;W4B];
-WRB5 = [W5R;W5B];
+WRB5 = [W5R;W10B];
 WRB6 = [W6R;W6B];
 WRB7 = [W7R;W7B];
 
@@ -624,7 +624,7 @@ WGB1 = [W1G;W1B];
 WGB2 = [W2G;W2B];
 WGB3 = [W3G;W3B];
 WGB4 = [W4G;W4B];
-WGB5 = [W5B;W5B];
+WGB5 = [W10B;W10B];
 WGB6 = [W6G;W6B];
 WGB7 = [W7G;W7B];
 
@@ -651,23 +651,23 @@ WDTW1GB = one(MCGB,WGB1);
 WDTW2GB = one(MCGB,WGB2);
 WDTW3GB = one(MCGB,WGB3);
 WDTW4GB = one(MCGB,WGB4);
-WDTW5BB = one(MCGB,WGB5);
+WDTW10BB = one(MCGB,WGB5);
 WDTW6GB = one(MCGB,WGB6);
 WDTW7GB = one(MCGB,WGB7);
 
-WDTWGB = [WDTW0GB(:,1); WDTW1GB(:,1); WDTW2GB(:,1); WDTW3GB(:,1); WDTW4GB(:,1); WDTW5BB(:,1); WDTW6GB(:,1); WDTW7GB(:,1)];
+WDTWGB = [WDTW0GB(:,1); WDTW1GB(:,1); WDTW2GB(:,1); WDTW3GB(:,1); WDTW4GB(:,1); WDTW10BB(:,1); WDTW6GB(:,1); WDTW7GB(:,1)];
 WDTWRG = [WDTW0RG(:,1); WDTW1RG(:,1); WDTW2RG(:,1); WDTW3RG(:,1); WDTW4RG(:,1); WDTW5RG(:,1); WDTW6RG(:,1); WDTW7RG(:,1)];
 Wone = [WDTW0RB(:,1); WDTW1RB(:,1); WDTW2RB(:,1); WDTW3RB(:,1); WDTW4RB(:,1); WDTW5RB(:,1); WDTW6RB(:,1); WDTW7RB(:,1)];
 
 %Dry - Trial 7
-DC = 'E:\Batch\5B\T7Dry\0';
-D1 = 'E:\Batch\5B\T7Dry\1';
-D2 = 'E:\Batch\5B\T7Dry\2';
-D3 = 'E:\Batch\5B\T7Dry\3';
-D4 = 'E:\Batch\5B\T7Dry\4';
-D5 = 'E:\Batch\5B\T7Dry\5';
-D6 = 'E:\Batch\5B\T7Dry\6';
-D7 = 'E:\Batch\5B\T7Dry\7';
+DC = 'E:\Batch\10B\T7Dry\0';
+D1 = 'E:\Batch\10B\T7Dry\1';
+D2 = 'E:\Batch\10B\T7Dry\2';
+D3 = 'E:\Batch\10B\T7Dry\3';
+D4 = 'E:\Batch\10B\T7Dry\4';
+D5 = 'E:\Batch\10B\T7Dry\5';
+D6 = 'E:\Batch\10B\T7Dry\6';
+D7 = 'E:\Batch\10B\T7Dry\7';
 DCS = imageDatastore(DC);
 D1S = imageDatastore(D1);
 D2S = imageDatastore(D2);
@@ -690,7 +690,7 @@ D1G = batchG(D1S);
 D2G = batchG(D2S);
 D3G = batchG(D3S);
 D4G = batchG(D4S);
-D5B = batchG(D5S);
+D10B = batchG(D5S);
 D6G = batchG(D6S);
 D7G = batchG(D7S);
 
@@ -699,7 +699,7 @@ D1B = batchB(D1S);
 D2B = batchB(D2S);
 D3B = batchB(D3S);
 D4B = batchB(D4S);
-D5B = batchB(D5S);
+D10B = batchB(D5S);
 D6B = batchB(D6S);
 D7B = batchB(D7S);
 
@@ -708,7 +708,7 @@ DRG1 = [D1R;D1G];
 DRG2 = [D2R;D2G];
 DRG3 = [D3R;D3G];
 DRG4 = [D4R;D4G];
-DRG5 = [D5R;D5B];
+DRG5 = [D5R;D10B];
 DRG6 = [D6R;D6G];
 DRG7 = [D7R;D7G];
 
@@ -717,7 +717,7 @@ DRB1 = [D1R;D1B];
 DRB2 = [D2R;D2B];
 DRB3 = [D3R;D3B];
 DRB4 = [D4R;D4B];
-DRB5 = [D5R;D5B];
+DRB5 = [D5R;D10B];
 DRB6 = [D6R;D6B];
 DRB7 = [D7R;D7B];
 
@@ -726,7 +726,7 @@ DGB1 = [D1G;D1B];
 DGB2 = [D2G;D2B];
 DGB3 = [D3G;D3B];
 DGB4 = [D4G;D4B];
-DGB5 = [D5B;D5B];
+DGB5 = [D10B;D10B];
 DGB6 = [D6G;D6B];
 DGB7 = [D7G;D7B];
 
@@ -753,23 +753,23 @@ DDTW1GB = one(MCGB,DGB1);
 DDTW2GB = one(MCGB,DGB2);
 DDTW3GB = one(MCGB,DGB3);
 DDTW4GB = one(MCGB,DGB4);
-DDTW5BB = one(MCGB,DGB5);
+DDTW10BB = one(MCGB,DGB5);
 DDTW6GB = one(MCGB,DGB6);
 DDTW7GB = one(MCGB,DGB7);
 
-DDTWGB = [DDTW0GB(:,1); DDTW1GB(:,1); DDTW2GB(:,1); DDTW3GB(:,1); DDTW4GB(:,1); DDTW5BB(:,1); DDTW6GB(:,1); DDTW7GB(:,1)];
+DDTWGB = [DDTW0GB(:,1); DDTW1GB(:,1); DDTW2GB(:,1); DDTW3GB(:,1); DDTW4GB(:,1); DDTW10BB(:,1); DDTW6GB(:,1); DDTW7GB(:,1)];
 DDTWRG = [DDTW0RG(:,1); DDTW1RG(:,1); DDTW2RG(:,1); DDTW3RG(:,1); DDTW4RG(:,1); DDTW5RG(:,1); DDTW6RG(:,1); DDTW7RG(:,1)];
 Done = [DDTW0RB(:,1); DDTW1RB(:,1); DDTW2RB(:,1); DDTW3RB(:,1); DDTW4RB(:,1); DDTW5RB(:,1); DDTW6RB(:,1); DDTW7RB(:,1)];
 
 %Nutrients - Trial 8
-NC = 'E:\Batch\5B\T8Nut\0';
-N1 = 'E:\Batch\5B\T8Nut\1';
-N2 = 'E:\Batch\5B\T8Nut\2';
-N3 = 'E:\Batch\5B\T8Nut\3';
-N4 = 'E:\Batch\5B\T8Nut\4';
-N5 = 'E:\Batch\5B\T8Nut\5';
-N6 = 'E:\Batch\5B\T8Nut\6';
-N7 = 'E:\Batch\5B\T8Nut\7';
+NC = 'E:\Batch\10B\T8Nut\0';
+N1 = 'E:\Batch\10B\T8Nut\1';
+N2 = 'E:\Batch\10B\T8Nut\2';
+N3 = 'E:\Batch\10B\T8Nut\3';
+N4 = 'E:\Batch\10B\T8Nut\4';
+N5 = 'E:\Batch\10B\T8Nut\5';
+N6 = 'E:\Batch\10B\T8Nut\6';
+N7 = 'E:\Batch\10B\T8Nut\7';
 NCS = imageDatastore(NC);
 N1S = imageDatastore(N1);
 N2S = imageDatastore(N2);
@@ -792,7 +792,7 @@ N1G = batchG(N1S);
 N2G = batchG(N2S);
 N3G = batchG(N3S);
 N4G = batchG(N4S);
-N5B = batchG(N5S);
+N10B = batchG(N5S);
 N6G = batchG(N6S);
 N7G = batchG(N7S);
 
@@ -801,7 +801,7 @@ N1B = batchB(N1S);
 N2B = batchB(N2S);
 N3B = batchB(N3S);
 N4B = batchB(N4S);
-N5B = batchB(N5S);
+N10B = batchB(N5S);
 N6B = batchB(N6S);
 N7B = batchB(N7S);
 
@@ -810,7 +810,7 @@ NRG1 = [N1R;N1G];
 NRG2 = [N2R;N2G];
 NRG3 = [N3R;N3G];
 NRG4 = [N4R;N4G];
-NRG5 = [N5R;N5B];
+NRG5 = [N5R;N10B];
 NRG6 = [N6R;N6G];
 NRG7 = [N7R;N7G];
 
@@ -819,7 +819,7 @@ NRB1 = [N1R;N1B];
 NRB2 = [N2R;N2B];
 NRB3 = [N3R;N3B];
 NRB4 = [N4R;N4B];
-NRB5 = [N5R;N5B];
+NRB5 = [N5R;N10B];
 NRB6 = [N6R;N6B];
 NRB7 = [N7R;N7B];
 
@@ -828,7 +828,7 @@ NGB1 = [N1G;N1B];
 NGB2 = [N2G;N2B];
 NGB3 = [N3G;N3B];
 NGB4 = [N4G;N4B];
-NGB5 = [N5B;N5B];
+NGB5 = [N10B;N10B];
 NGB6 = [N6G;N6B];
 NGB7 = [N7G;N7B];
 
@@ -855,23 +855,23 @@ NDTW1GB = one(MCGB,NGB1);
 NDTW2GB = one(MCGB,NGB2);
 NDTW3GB = one(MCGB,NGB3);
 NDTW4GB = one(MCGB,NGB4);
-NDTW5BB = one(MCGB,NGB5);
+NDTW10BB = one(MCGB,NGB5);
 NDTW6GB = one(MCGB,NGB6);
 NDTW7GB = one(MCGB,NGB7);
 
-NDTWGB = [NDTW0GB(:,1); NDTW1GB(:,1); NDTW2GB(:,1); NDTW3GB(:,1); NDTW4GB(:,1); NDTW5BB(:,1); NDTW6GB(:,1); NDTW7GB(:,1)];
+NDTWGB = [NDTW0GB(:,1); NDTW1GB(:,1); NDTW2GB(:,1); NDTW3GB(:,1); NDTW4GB(:,1); NDTW10BB(:,1); NDTW6GB(:,1); NDTW7GB(:,1)];
 NDTWRG = [NDTW0RG(:,1); NDTW1RG(:,1); NDTW2RG(:,1); NDTW3RG(:,1); NDTW4RG(:,1); NDTW5RG(:,1); NDTW6RG(:,1); NDTW7RG(:,1)];
 None = [NDTW0RB(:,1); NDTW1RB(:,1); NDTW2RB(:,1); NDTW3RB(:,1); NDTW4RB(:,1); NDTW5RB(:,1); NDTW6RB(:,1); NDTW7RB(:,1)];
 
 %Long - Trial 9
-LC = 'E:\Batch\5B\T9Long\0';
-L1 = 'E:\Batch\5B\T9Long\1';
-L2 = 'E:\Batch\5B\T9Long\2';
-L3 = 'E:\Batch\5B\T9Long\3';
-L4 = 'E:\Batch\5B\T9Long\4';
-L5 = 'E:\Batch\5B\T9Long\5';
-L6 = 'E:\Batch\5B\T9Long\6';
-L7 = 'E:\Batch\5B\T9Long\7';
+LC = 'E:\Batch\10B\T9Long\0';
+L1 = 'E:\Batch\10B\T9Long\1';
+L2 = 'E:\Batch\10B\T9Long\2';
+L3 = 'E:\Batch\10B\T9Long\3';
+L4 = 'E:\Batch\10B\T9Long\4';
+L5 = 'E:\Batch\10B\T9Long\5';
+L6 = 'E:\Batch\10B\T9Long\6';
+L7 = 'E:\Batch\10B\T9Long\7';
 LCS = imageDatastore(LC);
 L1S = imageDatastore(L1);
 L2S = imageDatastore(L2);
@@ -894,7 +894,7 @@ L1G = batchG(L1S);
 L2G = batchG(L2S);
 L3G = batchG(L3S);
 L4G = batchG(L4S);
-L5B = batchG(L5S);
+L10B = batchG(L5S);
 L6G = batchG(L6S);
 L7G = batchG(L7S);
 
@@ -903,7 +903,7 @@ L1B = batchB(L1S);
 L2B = batchB(L2S);
 L3B = batchB(L3S);
 L4B = batchB(L4S);
-L5B = batchB(L5S);
+L10B = batchB(L5S);
 L6B = batchB(L6S);
 L7B = batchB(L7S);
 
@@ -912,7 +912,7 @@ LRG1 = [L1R;L1G];
 LRG2 = [L2R;L2G];
 LRG3 = [L3R;L3G];
 LRG4 = [L4R;L4G];
-LRG5 = [L5R;L5B];
+LRG5 = [L5R;L10B];
 LRG6 = [L6R;L6G];
 LRG7 = [L7R;L7G];
 
@@ -921,7 +921,7 @@ LRB1 = [L1R;L1B];
 LRB2 = [L2R;L2B];
 LRB3 = [L3R;L3B];
 LRB4 = [L4R;L4B];
-LRB5 = [L5R;L5B];
+LRB5 = [L5R;L10B];
 LRB6 = [L6R;L6B];
 LRB7 = [L7R;L7B];
 
@@ -930,7 +930,7 @@ LGB1 = [L1G;L1B];
 LGB2 = [L2G;L2B];
 LGB3 = [L3G;L3B];
 LGB4 = [L4G;L4B];
-LGB5 = [L5B;L5B];
+LGB5 = [L10B;L10B];
 LGB6 = [L6G;L6B];
 LGB7 = [L7G;L7B];
 
@@ -957,23 +957,23 @@ LDTW1GB = one(MCGB,LGB1);
 LDTW2GB = one(MCGB,LGB2);
 LDTW3GB = one(MCGB,LGB3);
 LDTW4GB = one(MCGB,LGB4);
-LDTW5BB = one(MCGB,LGB5);
+LDTW10BB = one(MCGB,LGB5);
 LDTW6GB = one(MCGB,LGB6);
 LDTW7GB = one(MCGB,LGB7);
 
-LDTWGB = [LDTW0GB(:,1); LDTW1GB(:,1); LDTW2GB(:,1); LDTW3GB(:,1); LDTW4GB(:,1); LDTW5BB(:,1); LDTW6GB(:,1); LDTW7GB(:,1)];
+LDTWGB = [LDTW0GB(:,1); LDTW1GB(:,1); LDTW2GB(:,1); LDTW3GB(:,1); LDTW4GB(:,1); LDTW10BB(:,1); LDTW6GB(:,1); LDTW7GB(:,1)];
 LDTWRG = [LDTW0RG(:,1); LDTW1RG(:,1); LDTW2RG(:,1); LDTW3RG(:,1); LDTW4RG(:,1); LDTW5RG(:,1); LDTW6RG(:,1); LDTW7RG(:,1)];
 Lone = [LDTW0RB(:,1); LDTW1RB(:,1); LDTW2RB(:,1); LDTW3RB(:,1); LDTW4RB(:,1); LDTW5RB(:,1); LDTW6RB(:,1); LDTW7RB(:,1)];
 
 %Short - Trial 10
-SC = 'E:\Batch\5B\T10Shrt\0';
-S1 = 'E:\Batch\5B\T10Shrt\1';
-S2 = 'E:\Batch\5B\T10Shrt\2';
-S3 = 'E:\Batch\5B\T10Shrt\3';
-S4 = 'E:\Batch\5B\T10Shrt\4';
-S5 = 'E:\Batch\5B\T10Shrt\5';
-S6 = 'E:\Batch\5B\T10Shrt\6';
-S7 = 'E:\Batch\5B\T10Shrt\7';
+SC = 'E:\Batch\10B\T10Shrt\0';
+S1 = 'E:\Batch\10B\T10Shrt\1';
+S2 = 'E:\Batch\10B\T10Shrt\2';
+S3 = 'E:\Batch\10B\T10Shrt\3';
+S4 = 'E:\Batch\10B\T10Shrt\4';
+S5 = 'E:\Batch\10B\T10Shrt\5';
+S6 = 'E:\Batch\10B\T10Shrt\6';
+S7 = 'E:\Batch\10B\T10Shrt\7';
 SCS = imageDatastore(SC);
 S1S = imageDatastore(S1);
 S2S = imageDatastore(S2);
@@ -996,7 +996,7 @@ S1G = batchG(S1S);
 S2G = batchG(S2S);
 S3G = batchG(S3S);
 S4G = batchG(S4S);
-S5B = batchG(S5S);
+S10B = batchG(S5S);
 S6G = batchG(S6S);
 S7G = batchG(S7S);
 
@@ -1005,7 +1005,7 @@ S1B = batchB(S1S);
 S2B = batchB(S2S);
 S3B = batchB(S3S);
 S4B = batchB(S4S);
-S5B = batchB(S5S);
+S10B = batchB(S5S);
 S6B = batchB(S6S);
 S7B = batchB(S7S);
 
@@ -1014,7 +1014,7 @@ SRG1 = [S1R;S1G];
 SRG2 = [S2R;S2G];
 SRG3 = [S3R;S3G];
 SRG4 = [S4R;S4G];
-SRG5 = [S5R;S5B];
+SRG5 = [S5R;S10B];
 SRG6 = [S6R;S6G];
 SRG7 = [S7R;S7G];
 
@@ -1023,7 +1023,7 @@ SRB1 = [S1R;S1B];
 SRB2 = [S2R;S2B];
 SRB3 = [S3R;S3B];
 SRB4 = [S4R;S4B];
-SRB5 = [S5R;S5B];
+SRB5 = [S5R;S10B];
 SRB6 = [S6R;S6B];
 SRB7 = [S7R;S7B];
 
@@ -1032,7 +1032,7 @@ SGB1 = [S1G;S1B];
 SGB2 = [S2G;S2B];
 SGB3 = [S3G;S3B];
 SGB4 = [S4G;S4B];
-SGB5 = [S5B;S5B];
+SGB5 = [S10B;S10B];
 SGB6 = [S6G;S6B];
 SGB7 = [S7G;S7B];
 
@@ -1059,23 +1059,23 @@ SDTW1GB = one(MCGB,SGB1);
 SDTW2GB = one(MCGB,SGB2);
 SDTW3GB = one(MCGB,SGB3);
 SDTW4GB = one(MCGB,SGB4);
-SDTW5BB = one(MCGB,SGB5);
+SDTW10BB = one(MCGB,SGB5);
 SDTW6GB = one(MCGB,SGB6);
 SDTW7GB = one(MCGB,SGB7);
 
-SDTWGB = [SDTW0GB(:,1); SDTW1GB(:,1); SDTW2GB(:,1); SDTW3GB(:,1); SDTW4GB(:,1); SDTW5BB(:,1); SDTW6GB(:,1); SDTW7GB(:,1)];
+SDTWGB = [SDTW0GB(:,1); SDTW1GB(:,1); SDTW2GB(:,1); SDTW3GB(:,1); SDTW4GB(:,1); SDTW10BB(:,1); SDTW6GB(:,1); SDTW7GB(:,1)];
 SDTWRG = [SDTW0RG(:,1); SDTW1RG(:,1); SDTW2RG(:,1); SDTW3RG(:,1); SDTW4RG(:,1); SDTW5RG(:,1); SDTW6RG(:,1); SDTW7RG(:,1)];
 Sone = [SDTW0RB(:,1); SDTW1RB(:,1); SDTW2RB(:,1); SDTW3RB(:,1); SDTW4RB(:,1); SDTW5RB(:,1); SDTW6RB(:,1); SDTW7RB(:,1)];
 
 %Dark - Trial 11
-AC = 'E:\Batch\5B\T11Dark\0';
-A1 = 'E:\Batch\5B\T11Dark\1';
-A2 = 'E:\Batch\5B\T11Dark\2';
-A3 = 'E:\Batch\5B\T11Dark\3';
-A4 = 'E:\Batch\5B\T11Dark\4';
-A5 = 'E:\Batch\5B\T11Dark\5';
-A6 = 'E:\Batch\5B\T11Dark\6';
-A7 = 'E:\Batch\5B\T11Dark\7';
+AC = 'E:\Batch\10B\T11Dark\0';
+A1 = 'E:\Batch\10B\T11Dark\1';
+A2 = 'E:\Batch\10B\T11Dark\2';
+A3 = 'E:\Batch\10B\T11Dark\3';
+A4 = 'E:\Batch\10B\T11Dark\4';
+A5 = 'E:\Batch\10B\T11Dark\5';
+A6 = 'E:\Batch\10B\T11Dark\6';
+A7 = 'E:\Batch\10B\T11Dark\7';
 ACS = imageDatastore(AC);
 A1S = imageDatastore(A1);
 A2S = imageDatastore(A2);
@@ -1098,7 +1098,7 @@ A1G = batchG(A1S);
 A2G = batchG(A2S);
 A3G = batchG(A3S);
 A4G = batchG(A4S);
-A5B = batchG(A5S);
+A10B = batchG(A5S);
 A6G = batchG(A6S);
 A7G = batchG(A7S);
 
@@ -1107,7 +1107,7 @@ A1B = batchB(A1S);
 A2B = batchB(A2S);
 A3B = batchB(A3S);
 A4B = batchB(A4S);
-A5B = batchB(A5S);
+A10B = batchB(A5S);
 A6B = batchB(A6S);
 A7B = batchB(A7S);
 
@@ -1116,7 +1116,7 @@ ARG1 = [A1R;A1G];
 ARG2 = [A2R;A2G];
 ARG3 = [A3R;A3G];
 ARG4 = [A4R;A4G];
-ARG5 = [A5R;A5B];
+ARG5 = [A5R;A10B];
 ARG6 = [A6R;A6G];
 ARG7 = [A7R;A7G];
 
@@ -1125,7 +1125,7 @@ ARB1 = [A1R;A1B];
 ARB2 = [A2R;A2B];
 ARB3 = [A3R;A3B];
 ARB4 = [A4R;A4B];
-ARB5 = [A5R;A5B];
+ARB5 = [A5R;A10B];
 ARB6 = [A6R;A6B];
 ARB7 = [A7R;A7B];
 
@@ -1134,7 +1134,7 @@ AGB1 = [A1G;A1B];
 AGB2 = [A2G;A2B];
 AGB3 = [A3G;A3B];
 AGB4 = [A4G;A4B];
-AGB5 = [A5B;A5B];
+AGB5 = [A10B;A10B];
 AGB6 = [A6G;A6B];
 AGB7 = [A7G;A7B];
 
@@ -1161,11 +1161,11 @@ ADTW1GB = one(MCGB,AGB1);
 ADTW2GB = one(MCGB,AGB2);
 ADTW3GB = one(MCGB,AGB3);
 ADTW4GB = one(MCGB,AGB4);
-ADTW5BB = one(MCGB,AGB5);
+ADTW10BB = one(MCGB,AGB5);
 ADTW6GB = one(MCGB,AGB6);
 ADTW7GB = one(MCGB,AGB7);
 
-ADTWGB = [ADTW0GB(:,1); ADTW1GB(:,1); ADTW2GB(:,1); ADTW3GB(:,1); ADTW4GB(:,1); ADTW5BB(:,1); ADTW6GB(:,1); ADTW7GB(:,1)];
+ADTWGB = [ADTW0GB(:,1); ADTW1GB(:,1); ADTW2GB(:,1); ADTW3GB(:,1); ADTW4GB(:,1); ADTW10BB(:,1); ADTW6GB(:,1); ADTW7GB(:,1)];
 ADTWRG = [ADTW0RG(:,1); ADTW1RG(:,1); ADTW2RG(:,1); ADTW3RG(:,1); ADTW4RG(:,1); ADTW5RG(:,1); ADTW6RG(:,1); ADTW7RG(:,1)];
 Aone = [ADTW0RB(:,1); ADTW1RB(:,1); ADTW2RB(:,1); ADTW3RB(:,1); ADTW4RB(:,1); ADTW5RB(:,1); ADTW6RB(:,1); ADTW7RB(:,1)];
 
@@ -1187,7 +1187,7 @@ yline(Contstd3b,'k:','LineWidth',2);
 set(gca,'fontname','arial','fontsize',18,'fontweight','bold');
 xlabel('Time(days)')
 %ylabel('DTW')
-axis([0 7 .1 .7]);
+axis([0 7 .1 .6]);
 hold off
 
 %red
@@ -1208,7 +1208,7 @@ yline(Contstd3,'k:','LineWidth',2);
 set(gca,'fontname','arial','fontsize',18,'fontweight','bold');
 xlabel('Time(days)')
 %ylabel('DTW')
-axis([0 7 .1 .7]);
+axis([0 7 .1 .6]);
 hold off
 
 %green
@@ -1229,7 +1229,7 @@ yline(Contstd3g,'k:','LineWidth',2);
 set(gca,'fontname','arial','fontsize',18,'fontweight','bold');
 xlabel('Time(days)')
 %ylabel('DTW')
-axis([0 7 .1 .7]);
+axis([0 7 .1 .6]);
 hold off
 
 %ALL figure thing
