@@ -1,192 +1,425 @@
-CMRvG = 0.147
-CMRvB = 0.148
-CMGvB = 0.153
+CMR = 0.142
+CMG = 0.147
+CMB = 0.157
  
-CSRvG = 0.190
-CSRvB = 0.163
-CSGvB = 0.200
+CSR = 0.175
+CSG = 0.188
+CSB = 0.195
 
 x = [0 1 2 3 4 5 6 7];
 
-CuRvG = [0.192 0.202 0.139 0.131 0.145 0.296 0.177 0.162];
-CuGvB = [0.189 0.196 0.148 0.146 0.158 0.362 0.209 0.193];
-CuRvB = [0.176 0.195 0.137 0.139 0.143 0.194 0.181 0.169];
+CuR = [0.192
+0.202
+0.139
+0.131
+0.145
+0.296
+0.177
+0.162
+];
+CuG = [0.134
+0.294
+0.120
+0.205
+0.164
+0.307
+0.273
+0.265
+];
+CuB = [0.084
+0.272
+0.103
+0.235
+0.197
+0.328
+0.288
+0.278
+];
 
-ZnRvG = [0.138 0.136 0.134 0.142 0.130 0.247 0.140 0.149];
-ZnGvB = [0.141 0.148 0.140 0.146 0.140 0.282 0.162 0.163];
-ZnRvB = [0.138 0.143 0.136 0.142 0.137 0.156 0.151 0.155];
+ZnR = [0.107
+0.125
+0.106
+0.114
+0.111
+0.133
+0.113
+0.107
+];
+ZnG = [0.110
+0.171
+0.134
+0.124
+0.156
+0.206
+0.165
+0.170
+];
+ZnB = [0.163
+0.226
+0.184
+0.176
+0.214
+0.258
+0.230
+0.218
+];
 
-PbRvG = [0.145 0.229 0.134 0.209 0.147 0.218 0.201 0.136];
-PbGvB = [0.165 0.219 0.143 0.206 0.154 0.228 0.211 0.146];
-PbRvB = [0.159 0.202 0.134 0.198 0.151 0.151 0.194 0.139];
+PbR = [0.147
+0.271
+0.136
+0.298
+0.130
+0.272
+0.147
+0.127
+];
+PbG = [0.106
+0.303
+0.104
+0.341
+0.182
+0.331
+0.180
+0.139
+];
+PbB = [0.081
+0.250
+0.088
+0.301
+0.178
+0.306
+0.197
+0.161
+];
 
-MixRvG = [0.134 0.295 0.155 0.425 0.195 0.545 0.320 0.224];
-MixGvB = [0.141 0.288 0.152 0.418 0.206 0.676 0.370 0.266];
-MixRvB = [0.139 0.248 0.147 0.361 0.183 0.404 0.301 0.232];
+MixR = [0.149
+0.328
+0.210
+0.427
+0.264
+0.445
+0.356
+0.254
+];
+MixG = [0.136
+0.388
+0.262
+0.517
+0.339
+0.574
+0.471
+0.346
+];
+MixB = [0.104
+0.307
+0.199
+0.448
+0.290
+0.518
+0.433
+0.357
+];
 
 
-NuRvG = [0.148 0.154 0.156 0.152 0.152 0.281 0.152 0.154];
-NuGvB = [0.158 0.172 0.163 0.175 0.178 0.332 0.177 0.187];
-NuRvB = [0.149 0.165 0.157 0.170 0.175 0.182 0.173 0.170];
+NuR = [0.144
+0.186
+0.134
+0.164
+0.158
+0.205
+0.163
+0.183
+];
+NuG = [0.179
+0.227
+0.166
+0.199
+0.200
+0.247
+0.209
+0.240
+];
+NuB = [0.227
+0.276
+0.236
+0.267
+0.271
+0.307
+0.277
+0.287
+];
 
-DryRvG = [0.144 0.144 0.148 0.150 0.145 0.204 0.155 0.161];
-DryGvB = [0.148 0.148 0.152 0.151 0.138 0.204 0.155 0.170];
-DryRvB = [0.146 0.146 0.145 0.149 0.142 0.160 0.135 0.182];
+DryR = [0.118
+0.118
+0.104
+0.111
+0.105
+0.104
+0.133
+0.239
+];
+DryG = [0.195
+0.195
+0.142
+0.145
+0.122
+0.124
+0.124
+0.177
+];
+DryB = [0.213
+0.213
+0.171
+0.174
+0.147
+0.165
+0.186
+0.286
+];
 
-WetRvG = [0.149 0.149 0.165 0.147 0.144 0.258 0.160 0.157];
-WetGvB = [0.151 0.151 0.172 0.156 0.154 0.287 0.176 0.178];
-WetRvB = [0.146 0.146 0.171 0.151 0.150 0.167 0.170 0.172];
+WetR = [0.158
+0.158
+0.170
+0.173
+0.182
+0.177
+0.195
+0.206
+];
+WetG = [0.181
+0.181
+0.189
+0.206
+0.222
+0.222
+0.243
+0.261
+];
+WetB = [0.201
+0.201
+0.223
+0.231
+0.251
+0.266
+0.279
+0.291
+];
 
 
-ShRvG = [0.153 0.153 0.150 0.158 0.155 0.248 0.176 0.145];
-ShGvB = [0.172 0.172 0.172 0.183 0.181 0.305 0.203 0.165];
-ShRvB = [0.168 0.168 0.167 0.176 0.172 0.158 0.196 0.159];
 
-LgRvG = [0.162 0.162 0.184 0.149 0.167 0.288 0.202 0.186];
-LgGvB = [0.172 0.172 0.187 0.159 0.173 0.306 0.197 0.185];
-LgRvB = [0.164 0.164 0.181 0.151 0.162 0.194 0.185 0.176];
+ShR = [0.176
+0.176
+0.180
+0.191
+0.187
+0.189
+0.205
+0.203
+];
+ShG = [0.223
+0.223
+0.227
+0.245
+0.243
+0.244
+0.254
+0.245
+];
+ShB = [0.289
+0.289
+0.282
+0.301
+0.294
+0.299
+0.306
+0.295
+];
 
-DkRvG = [0.160 0.160 0.142 0.174 0.147 0.281 0.151 0.150];
-DkGvB = [0.194 0.194 0.179 0.210 0.188 0.349 0.192 0.191];
-DkRvB = [0.183 0.183 0.168 0.201 0.178 0.186 0.179 0.185];
+LgR = [0.198
+0.198
+0.244
+0.184
+0.238
+0.261
+0.281
+0.272
+];
+LgG = [0.241
+0.241
+0.271
+0.236
+0.283
+0.306
+0.315
+0.301
+];
+LgB = [0.241
+0.241
+0.255
+0.237
+0.266
+0.276
+0.269
+0.262
+];
+
+DkR = [0.238
+0.238
+0.218
+0.260
+0.220
+0.234
+0.221
+0.225
+];
+DkG = [0.294
+0.294
+0.271
+0.309
+0.276
+0.293
+0.281
+0.278
+];
+DkB = [0.391 0.391 0.401 0.391 0.406 0.401 0.403 0.404];
 
 
 figure;
-plot(x,CuRvG,'LineWidth',2);
+plot(x,CuR,'LineWidth',2);
 hold on
-plot(x,ZnRvG,'LineWidth',2);
-plot(x,PbRvG,'LineWidth',2);
-plot(x,MixRvG,'LineWidth',2);
-yline(CMRvG,'k','LineWidth',2);
-yline(CSRvG,'k--','LineWidth',2);
+plot(x,ZnR,'LineWidth',2);
+plot(x,PbR,'LineWidth',2);
+plot(x,MixR,'LineWidth',2);
+yline(CMR,'k','LineWidth',2);
+yline(CSR,'k--','LineWidth',2);
 legend('Copper','Zinc','Lead', 'Mix','Mean','3\sigma');
 set(gca,'fontname','arial','fontsize',18,'fontweight','bold');
-title('T-test Comparison of Metals (RvG)');
+title('T-test Comparison of Metals (Red)');
 xlabel('Time(days)');
 ylabel('t-value');
-axis([0 7 0.1 .7]);
+axis([0 7 0.2 .5]);
 hold off
 
 figure;
-plot(x,CuGvB,'LineWidth',2);
+plot(x,CuG,'LineWidth',2);
 hold on
-plot(x,ZnGvB,'LineWidth',2);
-plot(x,PbGvB,'LineWidth',2);
-plot(x,MixGvB,'LineWidth',2);
-yline(CMGvB,'k','LineWidth',2);
-yline(CSGvB,'k--','LineWidth',2);
+plot(x,ZnG,'LineWidth',2);
+plot(x,PbG,'LineWidth',2);
+plot(x,MixG,'LineWidth',2);
+yline(CMG,'k','LineWidth',2);
+yline(CSG,'k--','LineWidth',2);
 legend('Copper','Zinc','Lead', 'Mix','Mean','3\sigma');
 set(gca,'fontname','arial','fontsize',18,'fontweight','bold');
-title('T-test Comparison of Metals (GvB)');
+title('T-test Comparison of Metals (Green)');
 xlabel('Time(days)');
 ylabel('t-value');
-axis([0 7 0.1 .7]);
+axis([0 7 0.2 .5]);
 hold off
 
 figure;
-plot(x,CuRvB,'LineWidth',2);
+plot(x,CuB,'LineWidth',2);
 hold on
-plot(x,ZnRvB,'LineWidth',2);
-plot(x,PbRvB,'LineWidth',2);
-plot(x,MixRvB,'LineWidth',2);
-yline(CMRvB,'k','LineWidth',2);
-yline(CSRvB,'k--','LineWidth',2);
+plot(x,ZnB,'LineWidth',2);
+plot(x,PbB,'LineWidth',2);
+plot(x,MixB,'LineWidth',2);
+yline(CMB,'k','LineWidth',2);
+yline(CSB,'k--','LineWidth',2);
 legend('Copper','Zinc','Lead', 'Mix','Mean','3\sigma');
 set(gca,'fontname','arial','fontsize',18,'fontweight','bold');
-title('T-test Comparison of Metals (RvB)');
+title('T-test Comparison of Metals (Blue)');
 xlabel('Time(days)');
 ylabel('t-value');
-axis([0 7 0.1 .7]);
+axis([0 7 0.2 .5]);
 hold off
 
 figure;
-plot(x,WetRvG,'LineWidth',2);
+plot(x,WetR,'LineWidth',2);
 hold on
-plot(x,DryRvG,'LineWidth',2);
-plot(x,NuRvG,'LineWidth',2);
-yline(CMRvG,'k','LineWidth',2);
-yline(CSRvG,'k--','LineWidth',2);
+plot(x,DryR,'LineWidth',2);
+plot(x,NuR,'LineWidth',2);
+yline(CMR,'k','LineWidth',2);
+yline(CSR,'k--','LineWidth',2);
 legend('Wet','Dry','Nutrients','Mean','3\sigma');
 set(gca,'fontname','arial','fontsize',18,'fontweight','bold');
-title('T-test Environmental Stressors (RvG)');
+title('T-test Environmental Stressors (Red)');
 xlabel('Time(days)');
 ylabel('t-value');
-axis([0 7 0.1 .7]);
+axis([0 7 0.2 .5]);
 hold off
 
 figure;
-plot(x,WetGvB,'LineWidth',2);
+plot(x,WetG,'LineWidth',2);
 hold on
-plot(x,DryGvB,'LineWidth',2);
-plot(x,NuGvB,'LineWidth',2);
-yline(CMGvB,'k','LineWidth',2);
-yline(CSGvB,'k--','LineWidth',2);
+plot(x,DryG,'LineWidth',2);
+plot(x,NuG,'LineWidth',2);
+yline(CMG,'k','LineWidth',2);
+yline(CSG,'k--','LineWidth',2);
 legend('Wet','Dry','Nutrients','Mean','3\sigma');
 set(gca,'fontname','arial','fontsize',18,'fontweight','bold');
-title('T-test Environmental Stressors (GvB)');
+title('T-test Environmental Stressors (Green)');
 xlabel('Time(days)');
 ylabel('t-value');
-axis([0 7 0.1 .7]);
+axis([0 7 0.2 .5]);
 hold off
 
 figure;
-plot(x,WetRvB,'LineWidth',2);
+plot(x,WetB,'LineWidth',2);
 hold on
-plot(x,DryRvB,'LineWidth',2);
-plot(x,NuRvB,'LineWidth',2);
-yline(CMRvB,'k','LineWidth',2);
-yline(CSRvB,'k--','LineWidth',2);
+plot(x,DryB,'LineWidth',2);
+plot(x,NuB,'LineWidth',2);
+yline(CMB,'k','LineWidth',2);
+yline(CSB,'k--','LineWidth',2);
 legend('Wet','Dry','Nutrients','Mean','3\sigma');
 set(gca,'fontname','arial','fontsize',18,'fontweight','bold');
-title('T-test Environmental Stressors (RvB)');
+title('T-test Environmental Stressors (Blue)');
 xlabel('Time(days)');
 ylabel('t-value');
-axis([0 7 0.1 .7]);
+axis([0 7 0.2 .5]);
 hold off
 
 figure;
-plot(x,LgRvG,'LineWidth',2);
+plot(x,LgR,'LineWidth',2);
 hold on
-plot(x,ShRvG,'LineWidth',2);
-plot(x,DkRvG,'LineWidth',2);
-yline(CMRvG,'k','LineWidth',2);
-yline(CSRvG,'k--','LineWidth',2);
+plot(x,ShR,'LineWidth',2);
+plot(x,DkR,'LineWidth',2);
+yline(CMR,'k','LineWidth',2);
+yline(CSR,'k--','LineWidth',2);
 legend('Long','Short','Dark','Mean','3\sigma');
 set(gca,'fontname','arial','fontsize',18,'fontweight','bold');
-title('T-test Comparison of Photoperiod (RvG)');
+title('T-test Comparison of Photoperiod (Red)');
 xlabel('Time(days)');
 ylabel('t-value');
-axis([0 7 0.1 .7]);
+axis([0 7 0.2 .5]);
 hold off
 
 figure;
-plot(x,LgGvB,'LineWidth',2);
+plot(x,LgG,'LineWidth',2);
 hold on
-plot(x,ShGvB,'LineWidth',2);
-plot(x,DkGvB,'LineWidth',2);
-yline(CMGvB,'k','LineWidth',2);
-yline(CSGvB,'k--','LineWidth',2);
+plot(x,ShG,'LineWidth',2);
+plot(x,DkG,'LineWidth',2);
+yline(CMG,'k','LineWidth',2);
+yline(CSG,'k--','LineWidth',2);
 legend('Long','Short','Dark','Mean','3\sigma');
 set(gca,'fontname','arial','fontsize',18,'fontweight','bold');
-title('T-test Comparison of Photoperiod (GvB)');
+title('T-test Comparison of Photoperiod (Green)');
 xlabel('Time(days)');
 ylabel('t-value');
-axis([0 7 0.1 .7]);
+axis([0 7 0.2 .5]);
 hold off
 
 figure;
-plot(x,LgRvB,'LineWidth',2);
+plot(x,LgB,'LineWidth',2);
 hold on
-plot(x,ShRvB,'LineWidth',2);
-plot(x,DkRvB,'LineWidth',2);
-yline(CMRvB,'k','LineWidth',2);
-yline(CSRvB,'k--','LineWidth',2);
+plot(x,ShB,'LineWidth',2);
+plot(x,DkB,'LineWidth',2);
+yline(CMB,'k','LineWidth',2);
+yline(CSB,'k--','LineWidth',2);
 legend('Long','Short','Dark','Mean','3\sigma');
 set(gca,'fontname','arial','fontsize',18,'fontweight','bold');
-title('T-test Comparison of Photoperiod (RvB)');
+title('T-test Comparison of Photoperiod (Blue)');
 xlabel('Time(days)');
 ylabel('t-value');
-axis([0 7 0.1 .7]);
+axis([0 7 0.2 .5]);
 hold off
 
 
